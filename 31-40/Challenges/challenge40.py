@@ -15,7 +15,8 @@ elif option == 2:
     if withdrawl_amount <= balance:
         if withdrawl_amount % 100 == 0:
             print("Withdrawl successful")
-            print("Current balance in account : ", balance - withdrawl_amount)
+            balance = balance - withdrawl_amount
+            print("Current balance in account : ", balance)
         else:
             print("Enter the amount in the multiple of 100.")
     else:
