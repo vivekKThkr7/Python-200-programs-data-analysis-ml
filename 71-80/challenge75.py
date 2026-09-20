@@ -1,5 +1,7 @@
-name = ["Ram", "Shyam", "Gita", "Sita", "Mohan"]
+names = ["Ram", "Shyam", "Gita", "Sita", "Mohan"]
 
-print("Enter the name to remove the list: ")
+remove_name = input("Enter the name to remove: ")
 
-name.remove
+names.remove(remove_name)
+
+print(names)

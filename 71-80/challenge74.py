@@ -1,7 +1,7 @@
-number = []
+numbers = []
 
-number.append(2,3, 4, 5, 6,)
+for i in range(5):
+    number = int(input("Enter a number: "))
+    numbers.append(number)
 
-
-
-print(number)
+print(numbers)
