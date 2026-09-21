@@ -18,7 +18,7 @@ marks = []
 
 # Get marks and store them in the list.
 for i in range(students):
-    mark = int(input("Enter marks of student {i+1}: "))
+    mark = int(input(f"Enter marks of student {i+1}: "))
     marks.append(mark)
 
 print("Marks: ", marks)
