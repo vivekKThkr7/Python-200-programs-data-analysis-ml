@@ -6,3 +6,6 @@
 Programs 91 -100 : Functions -- Turing Code into Reusable Tools
 
 ** Functions let us write a piece of logic once and reuse it whenever we need it. 
+
+Definition -> A function is a named block of code that performs a specific task.
+
