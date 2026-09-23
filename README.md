@@ -9,3 +9,13 @@ Programs 91 -100 : Functions -- Turing Code into Reusable Tools
 
 Definition -> A function is a named block of code that performs a specific task.
 
+
+100 / 200 -> 50 % Completed  💐  (Halfway Point)
+
+1 - 20 Fundamentsls
+21 - 40 Decision making
+41 - 60 Loops & Algorithms
+61 - 70 Strings
+71 - 90 Lists & Structured Data
+91 - 100 Functions
+
