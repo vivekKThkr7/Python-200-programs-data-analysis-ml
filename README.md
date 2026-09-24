@@ -19,3 +19,17 @@ Definition -> A function is a named block of code that performs a specific task.
 71 - 90 Lists & Structured Data
 91 - 100 Functions
 
+
+Program 101 - 110 Dictionaries -- Storing Data with meaning
+
+marks = [75, 82, 85]  -> (List)
+
+
+<!-- DDictionary -->
+student = {
+    "name": "Vivek",
+    "age": 27,
+    "country": "Nepal"
+}
+
+
