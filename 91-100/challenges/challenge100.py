@@ -17,12 +17,11 @@ def calculate_total(marks):
 
     return total
 
-def calculate_average(marks):
-    average = 0 
-    for mark in marks:
-        average = mark / len(marks)
 
-    return average
+def calculate_average(marks):
+    total = calculate_total(marks)
+    return total / len(marks)
+
 
 def find_highest(marks):
     highest = marks[0]
@@ -32,6 +31,7 @@ def find_highest(marks):
             highest = mark
 
     return highest
+
 
 def find_lowest(marks):
     lowest = marks[0]
@@ -53,14 +53,24 @@ def count_passed(marks):
     return passed
 
 
+def count_failed(marks):
+    failed = 0
+
+    for mark in marks:
+        if mark < 40:
+            failed += 1
+
+    return failed
+
+
 marks = [75, 82, 45, 91, 30]
 
 total = calculate_total(marks)
-average = total / len(marks)
+average = calculate_average(marks)
 highest = find_highest(marks)
 lowest = find_lowest(marks)
 passed = count_passed(marks)
-failed = len(marks) - passed
+failed = count_failed(marks)
 
 print("Marks:", marks)
 print("Total:", total)

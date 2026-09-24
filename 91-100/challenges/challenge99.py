@@ -9,28 +9,32 @@ def calculate_total(numbers):
     total = 0
 
     for number in numbers:
-        total += numbers
+        total += number
 
     return total
 
+
 def calculate_average(numbers):
-    total = calculate_average(numbers)
+    total = calculate_total(numbers)
     return total / len(numbers)
+
 
 def count_passed(numbers):
     count = 0
-    if numbers < 50:
-        return count+=1
-    else:
-        return count-=1
+
+    for number in numbers:
+        if number >= 40:
+            count += 1
+
+    return count
 
 
-marks = marks = [75, 82, 45, 91, 60]
+marks = [75, 82, 45, 91, 60]
 
 total = calculate_total(marks)
 average = calculate_average(marks)
-count_passed = count_passed(marks)
+passed = count_passed(marks)
 
-print(calculate_total)
-print(calculate_average)
-print(count_passed)
+print("Total:", total)
+print("Average:", average)
+print("Passed:", passed)
