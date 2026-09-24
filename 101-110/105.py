@@ -8,3 +8,7 @@ student = {
 del student['age']
 
 print(student)
+
+
+# student.pop("age")
+# print(student)
