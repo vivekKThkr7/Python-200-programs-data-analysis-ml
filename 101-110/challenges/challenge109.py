@@ -13,6 +13,6 @@ marks = {
 
 for name, mark in marks.items():
     if mark >= 40:
-        print(name, marks, " -> pass")
+        print(name, mark, " -> pass")
     else:
-        print(name, marks, "-> Fail")
+        print(name, mark, "-> Fail")

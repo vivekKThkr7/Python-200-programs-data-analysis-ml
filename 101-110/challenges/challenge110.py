@@ -40,7 +40,11 @@ failed = 0
 highest = None
 lowest = None
 
+highest_student = None
+lowest_student = None
+
 for name, mark in marks.items():
+
     total += mark
 
     if mark >= 40:
@@ -50,10 +54,12 @@ for name, mark in marks.items():
 
     if highest is None or mark > highest:
         highest = mark
+        highest_student = name
 
     if lowest is None or mark < lowest:
         lowest = mark
-        
+        lowest_student = name
+
 
 average = total / len(marks)
 
@@ -61,6 +67,8 @@ print("Total students:", len(marks))
 print("Total marks:", total)
 print("Average:", average)
 print("Highest mark:", highest)
+print("Highest student:", highest_student)
+print("Lowest mark:", lowest)
+print("Lowest student:", lowest_student)
 print("Passed:", passed)
-print("lowest: ", lowest)
 print("Failed:", failed)

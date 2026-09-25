@@ -17,17 +17,8 @@ marks = {
 
 name = input("Enter name of student: ")
 
-if "Ram" in name:
-    print("Mark : 75")
 
-elif "Sita" in name:
-    print("Mark : 82")
-
-elif "Hari" in name:
-    print("Mark : 35")
-
-elif "Gita" in name: 
-    print("Mark : 91")
-
+if name in marks:
+    print("Mark:", marks[name])
 else:
     print("Invalid name!!!")
