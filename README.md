@@ -63,3 +63,42 @@ numbers = [10, 20, 30, 40, 50]
 
 <!-- list -> can be changed -->
 <!-- Tuple cannot be changed -->
+
+
+
+
+<!-- List
+[10, 20, 20, 30]
+→ ordered collection
+→ duplicates allowed
+→ changeable
+
+Tuple
+(10, 20, 20, 30)
+→ ordered collection
+→ duplicates allowed
+→ not changeable
+
+Set
+{10, 20, 30}
+→ unique values
+→ duplicates removed -->
+
+
+
+🧠 DATA STRUCTURE CHEAT SHEET
+
+This is one of the most important tables in your course.
+
+Structure	 Example   Changeable?	Duplicates?	   Main idea
+List	     [1,2,3]	✅	        ✅	        Ordered collection
+Tuple	     (1,2,3)	❌	        ✅	        Fixed collection
+Set	         {1,2,3}	✅	        ❌	        Unique values
+Dictionary	 {"a":1}	✅	      Keys unique	 Key → value
+
+
+<!-- Simple memory trick
+LIST       → MANY VALUES
+TUPLE      → FIXED VALUES
+SET        → UNIQUE VALUES
+DICTIONARY → NAMED VALUES -->
