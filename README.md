@@ -32,9 +32,6 @@ student = {
     "country": "Nepal"
 }
 
-
-
-
 <!-- Important things to Notice -->
 
 1. variable
@@ -55,3 +52,14 @@ ages = {
     "Sita": 30
 }
 
+
+<!-- Programms 111 - 120: Tuples, sets, & choosing the right Data Structure -->
+
+<!-- Tuple : is a collection of values that normally should not be changed -->
+
+eg numbers = (10, 20, 30, 40, 50)
+looks similar to lsit but 
+numbers = [10, 20, 30, 40, 50]
+
+<!-- list -> can be changed -->
+<!-- Tuple cannot be changed -->
