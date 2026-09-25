@@ -33,3 +33,25 @@ student = {
 }
 
 
+
+
+<!-- Important things to Notice -->
+
+1. variable
+
+age = 27
+
+
+2. List
+
+age = [20, 24, 38, 30]
+
+
+3. Dictionary
+
+ages = {
+    "Vivek": 27,
+    "Ram": 25,
+    "Sita": 30
+}
+
