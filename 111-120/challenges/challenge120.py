@@ -30,3 +30,21 @@
 # Total numbers: 5
 # Unique numbers: 3
 # Duplicates found: Yes
+
+numbers = []
+
+for i in range(5):
+    number = int(input("Enter a number: "))
+    numbers.append(number)
+
+unique_numbers = set(numbers)
+
+print("Original numbers:", numbers)
+print("Unique numbers:", unique_numbers)
+print("Total numbers:", len(numbers))
+print("Unique numbers:", len(unique_numbers))
+
+if len(numbers) == len(unique_numbers):
+    print("Duplicates found: No")
+else:
+    print("Duplicates found: Yes")
