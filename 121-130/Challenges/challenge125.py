@@ -1,0 +1,1 @@
+# use with open() to create a file called: message.txt & and write a short message.
