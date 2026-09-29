@@ -123,3 +123,43 @@ age = int(input("Enter your age: "))
 # any value except integer return an error 
 
 # eg: if someone type abcd it gives ValueError
+
+
+
+Program 131 - 140 : OOP - Class & Objects
+130/200 -> 65%
+
+<!-- What is OOP? -->
+
+Its a way of organizing a program around objects data and behavior.
+
+For example, think about a bank account.
+
+It has data:
+
+account holder
+balance
+account number
+
+And it has behavior:
+
+deposit
+withdraw
+check balance
+
+Instead of keeping everything scattered around, OOP lets us package related things together.
+
+Think:
+
+BANK ACCOUNT OBJECT
+────────────────────
+Data:
+  owner
+  balance
+
+Actions:
+  deposit()
+  withdraw()
+  check_balance()
+
+That's the core idea.
