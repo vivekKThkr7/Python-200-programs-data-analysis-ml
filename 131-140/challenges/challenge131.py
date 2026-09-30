@@ -1,4 +1,9 @@
 # Create a class:
 #  create one object from it
-class person:
+class Person:
     pass
+
+
+person1 = Person()
+
+print(person1)
