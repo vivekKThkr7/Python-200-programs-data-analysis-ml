@@ -163,3 +163,14 @@ Actions:
   check_balance()
 
 That's the core idea.
+
+
+
+Term   -----> Simple Meaning
+Class          Blueprint
+Object        Actual thing created from class
+Attribute     Data belonging to the onjebt
+Method        Function benlonging to object.
+self          current object
+_init_( )     Setup when object is created
+instance      Another word for an object
