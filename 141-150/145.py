@@ -16,3 +16,8 @@ student = Student("Ram", 65)
 
 print(student.name)
 print(student.marks)
+
+
+
+# New Concept " super() "
+# Means: Run the parent class's __init__()
