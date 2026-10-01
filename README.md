@@ -174,3 +174,85 @@ Method        Function benlonging to object.
 self          current object
 _init_( )     Setup when object is created
 instance      Another word for an object
+
+
+
+
+
+
+
+
+
+
+🧠 OOP FUNDAMENTAL CHECKPOINT
+
+I especially want you to understand these four levels.
+
+Level 1 — Class
+class Student:
+
+Blueprint.
+
+Level 2 — Object
+student = Student(...)
+
+Actual thing.
+
+Level 3 — Inheritance
+class Student(Person):
+
+Student gets reusable behavior from Person.
+
+Level 4 — Polymorphism
+for employee in employees:
+    employee.work()
+
+Different objects can perform the same method differently.
+
+🔥 Your biggest fundamental concept — one more time
+
+Look at:
+
+employees = [
+    Developer("Ram"),
+    Designer("Sita")
+]
+
+Here:
+
+employees
+   ↓
+WHOLE LIST
+
+Inside:
+
+for employee in employees:
+employees → whole collection
+employee  → one object
+
+Then:
+
+employee.work()
+
+means:
+
+Call work() on this particular object.
+
+This is the same fundamental pattern you've been learning since lists:
+
+marks → whole list
+mark  → one item
+
+and now:
+
+employees → whole list
+employee  → one object
+
+🔥 Same thinking. Different data.
+
+🧠 Four OOP Terms — Simple Definitions
+Concept	Simple meaning
+Encapsulation	Control access to object data
+Inheritance	Child reuses parent
+Overriding	Child changes inherited behavior
+Polymorphism	Same method call, different behavior
