@@ -256,3 +256,17 @@ Encapsulation	Control access to object data
 Inheritance	Child reuses parent
 Overriding	Child changes inherited behavior
 Polymorphism	Same method call, different behavior
+
+
+
+<!-- Program 151 to 160 : Writing Cleaner, more Practical Python -->
+151 → import
+152 → useful built-in modules
+153 → create your own module
+154 → variable scope
+155 → global vs local
+156 → list comprehension
+157 → comprehension with condition
+158 → dictionary comprehension
+159 → lambda
+160 → combining these ideas
