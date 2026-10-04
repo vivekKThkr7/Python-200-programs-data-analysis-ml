@@ -1,7 +1,18 @@
-# Create Dog,  Cat
-# Both should have: speak()
-# But Dog prints: Woof
-# But Cat prints: Meow
-# Put both objects in a list and use one loop
-# for animal in animals:
-#   animal.speak()
+# Challenge 149 ⭐
+# Dog and Cat both have speak().
+# Use both objects in one list and one loop.
+
+class Dog:
+    def speak(self):
+        print("Woof")
+
+
+class Cat:
+    def speak(self):
+        print("Meow")
+
+
+animals = [Dog(), Cat()]
+
+for animal in animals:
+    animal.speak()
