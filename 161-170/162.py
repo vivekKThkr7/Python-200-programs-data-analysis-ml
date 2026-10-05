@@ -10,3 +10,5 @@ def show_menu():
 show_menu()
 
 
+# This is useful because whenever we need the menu, we can simply call "show_menu()"
+# Give a piece of logic a name so you can reuse it.
