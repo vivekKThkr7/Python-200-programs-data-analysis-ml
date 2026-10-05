@@ -270,3 +270,24 @@ Polymorphism	Same method call, different behavior
 158 → dictionary comprehension
 159 → lambda
 160 → combining these ideas
+
+
+
+
+
+<!-- Programs 161–170: From Python Exercises to a Real Project -->
+<!-- 
+    User
+ ↓
+Input
+ ↓
+Validation
+ ↓
+Data structure
+ ↓
+Functions
+ ↓
+File storage
+ ↓
+Reports
+ -->
