@@ -1,3 +1,24 @@
+# Create:
+
+# employees = {
+#     "Ram": 2500,
+#     "Sita": 3500,
+#     "Hari": 1800,
+#     "Gita": 4200,
+#     "Mohan": 3000
+# }
+
+# Create a new dictionary containing employees whose salary is 3000 or more.
+
+# Then display:
+# High salary employees:
+# Sita → 3500
+# Gita → 4200
+# Mohan → 3000
+
+# Bonus Calculate their average salary.
+
+
 employees = {
     "Ram": 2500,
     "Sita": 3500,
