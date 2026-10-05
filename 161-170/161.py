@@ -18,3 +18,9 @@ def get_positive_number():
 
 amount = get_positive_number()
 print("Amount: ", amount)
+
+
+
+# Here instead of trusting the user: "please type correctly"
+# we make the program protect itself.
+
