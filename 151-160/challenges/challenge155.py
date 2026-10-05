@@ -1,3 +1,6 @@
+# Create a global variable and a local variable with the same name
+# print both and observe the difference
+
 name = "Global Name"
 
 def show_name():
