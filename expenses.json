@@ -8,5 +8,10 @@
         "description": "Taxi",
         "amount": 15,
         "category": "Travel"
+    },
+    {
+        "description": "breakfast",
+        "amount": 10.0,
+        "category": "Food"
     }
 ]
