@@ -1,17 +1,12 @@
 [
     {
         "description": "Lunch",
-        "amount": 25.5,
-        "category": "Food"
+        "amount": 25,
+        "category": "food"
     },
     {
         "description": "Taxi",
         "amount": 15,
-        "category": "Travel"
-    },
-    {
-        "description": "breakfast",
-        "amount": 10.0,
-        "category": "Food"
+        "category": "travel"
     }
 ]
