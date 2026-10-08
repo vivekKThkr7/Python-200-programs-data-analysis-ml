@@ -1,19 +1,7 @@
-# Safe Positive amount. 
-# Create a reusable function.
+# pathlib is a built-in Python module used to work with: files, folders, file paths
 
-def get_positive_amount():
-    while True:
-        try:
-            amount = float(input("Enter amount: "))
+# Instead of treating a path as just a string, Python gives us a Path object.
 
-            if amount > 0:
-                return amount
-            else:
-                print("Amount must be greater than 0.")
+from pathlib import Path
 
-        except ValueError:
-            print("Please enter a valid number.")
-
-amount = get_positive_amount()
-
-print("Amount:", amount)
+file_path = Path("notes.txt")

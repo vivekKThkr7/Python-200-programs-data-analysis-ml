@@ -294,5 +294,22 @@ Reports
 
 
  <!-- Programs 171–180: Making a Real Project Reliable -->
+<!-- IN this level we are going to learn how real Python programs are organized and used in practical work. -->
+
+<!-- Q. What is pathlib? -->
+
+Pathlib is a built-in python module used to work with; Files, Folders, File paths.
+Instead of treating a path as jsut a string, oython gives us a path object.
+
+Example:
+
+from pathlib import path
+
+file_path = path("notes.txt)
+
+here:
+file_path -> path object -> notes.txt
+
+
 
 
