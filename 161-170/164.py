@@ -8,7 +8,7 @@ expenses = {
 {
     'description' : "Taxi",
     'amount' : 15,
-    "catetory" : "Travel"
+    "category" : "Travel"
 }
 
 for expense in expenses:

@@ -2,7 +2,7 @@
 
 expense = {
     "description" : "lunch",
-    "amount" : "25.5",
+    "amount" : 25.5,
     "category" : "Food"
 }
 
