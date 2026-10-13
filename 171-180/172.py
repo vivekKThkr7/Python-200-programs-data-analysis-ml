@@ -1,11 +1,12 @@
-# check wheather file exist. 
+#  Working wih Dates and Times
+# Python's built-in datetime module helps us work with dates, times, and timestamps.
+# Applications use for attendence, employee records, expense tracking invoices, and expiry dates.
 
-from pathlib import Path
+from datetime import date, datetime
 
-file_path = Path("notes.txt")
+today = date.today()
+current_time = datetime.now()
 
-if file_path.exists():
-    print("File exist")
-
-else:
-    print("File does not exist.")
+print("Today's date:", today)
+print("Current time:", current_time.strftime("%H:%M"))
+print("Formatted date:", today.strftime("%d-%m-%Y"))
