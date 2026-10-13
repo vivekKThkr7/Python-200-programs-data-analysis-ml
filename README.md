@@ -313,3 +313,6 @@ file_path -> path object -> notes.txt
 
 
 
+from Program 176.py
+Q. Why not simply print an error inside the function?
+A. Because raising an exception allows the calling code to decide how to handle the problem. This helps separate the business logic from the application's response to errors.
