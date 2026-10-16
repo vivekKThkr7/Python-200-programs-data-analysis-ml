@@ -376,3 +376,15 @@ Status   code	Meaning
 404	    Resource not found
 500	    Internal server error
  -->
+
+
+<!-- Handling API Error and Timeout -->
+<!-- networks can fail, URLs can be incorrect. records can be missing, Server can become temporarily unavailable. -->
+<!-- What are the common request error? -->
+ERROR TYPE         Type Cause
+HTTPError           Unsuccessful HTTP atatus after checking the response
+Timeout             The request took too long without a timely response
+ConnectionError     A network connection problem
+QequestException    A border request-related exception
+
+
