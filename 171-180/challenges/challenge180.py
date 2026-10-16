@@ -67,7 +67,7 @@ def main() -> None:
     add_product(inventory, "Keyboard", 25, 10)
     add_product(inventory, "Mouse", 15, 20)
 
-    print("----- INVENTORY -----\n")
+    print("________INVENTORY________\n")
     show_inventory(inventory)
     print()
 
@@ -75,7 +75,7 @@ def main() -> None:
     attempt_sale(inventory[1], 50)   # insufficient stock
     attempt_sale(inventory[1], 0)    # invalid quantity
 
-    print("----- UPDATED INVENTORY -----\n")
+    print("________UPDATED INVENTORY________\n")
     show_inventory(inventory)
     print()
     show_total_value(inventory)
