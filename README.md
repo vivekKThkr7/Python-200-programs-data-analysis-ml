@@ -363,3 +363,16 @@ API request often involves aa URL called an endpoint.
 <!--   GET   ==> Retrieve Information  -->
 <!--   POST ==>  Send data to a server -->
 
+<!-- What is Status code? -->
+<!-- An HTTP status code is a number that describes the result of a request. -->
+
+<!-- 
+Status   code	Meaning
+200	    Request succeeded
+201	    Resource created
+400	    Bad request
+401	    Authentication required or failed
+403	    Access forbidden
+404	    Resource not found
+500	    Internal server error
+ -->
