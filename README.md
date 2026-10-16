@@ -316,3 +316,50 @@ file_path -> path object -> notes.txt
 from Program 176.py
 Q. Why not simply print an error inside the function?
 A. Because raising an exception allows the calling code to decide how to handle the problem. This helps separate the business logic from the application's response to errors.
+
+
+
+
+
+<!-- Python Set 19  -->
+<!-- Our learning plan -->
+<!-- 
+
+Program	     Topic
+181	        What an API is and how to make a GET request
+182	        HTTP status codes and successful responses
+183	        Query parameters
+184	        Reading and processing API data
+185	        Handling API errors and timeouts
+186	        Sending data using POST
+187	        Working with nested JSON
+188	        Building reusable API functions
+189	        Saving API data into a JSON file
+190	        Mini project: User Directory API
+
+ -->
+
+
+# what is requests?
+#  It is Python library that makes it easier to communicate with web serrvers. unlike Pathlib, JSON and datatime,  it is not part of Python's standard library, so need to be installed form the terminal. 
+
+# python -m pip install requests
+
+# What is API?
+
+# API -> APPLICATION PROGRAMMING INTERFACE.
+# API as a way for one application to request information or services from another application.
+
+python program (request a post) <==> API/Web server(Receives the request and returns data) <==> Python Program (Read thye response and uses the data)
+
+
+API request often involves aa URL called an endpoint. 
+<!--  https://jsonplaceholder.typicode.com/posts/1 -->
+
+
+<!-- What is HTTP -->
+<!-- HTTP is a protocal that allows clients and servers to communicate over a network. -->
+
+<!--   GET   ==> Retrieve Information  -->
+<!--   POST ==>  Send data to a server -->
+
