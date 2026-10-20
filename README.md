@@ -388,3 +388,21 @@ ConnectionError     A network connection problem
 QequestException    A border request-related exception
 
 
+
+
+
+<!-- 191 - 200 -->
+
+<!-- This is the foundation for progressing toward AI and data-driven applications. -->
+
+191  ->> NumPy - numberical arrays
+192  ->> NumPy - Calculation and statics
+193  ->> Pandas - DataFrames
+194  ->> Reading and writing CSV data
+195  ->> Cleaning Missing and duplicate data
+196  ->> Grouping and analysing data
+197  ->> Visualizing data analysing data 
+198  ->> Understanding machine-learning model
+199  ->> Training and evaluting a maching-learning model
+200  ->> Final capstone - Data Analysins and AI Pipeline
+
