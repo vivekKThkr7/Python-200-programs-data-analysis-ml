@@ -11,7 +11,7 @@ data = {
 
 df = pd.DataFrame(data)
 
-df["stock_value"] = df["price"] * df["quantity"]
+df["stock_value"] = df["price"] * df["quantity"]   # Converts the dictionary into a table.
 
 print("Complete inventory: ")
 print(df)
