@@ -418,3 +418,13 @@ groupby()  ->> group redcords according to a particular column and then lets you
 
 pandas describes this as a split-apply-combinr operation: split the data into groups, calculate something for each group, and combine the results.
 
+
+
+
+Program 197 ; Visualizing Data with Matplotlib
+
+Numbers and table are useful, but a chart can make a pattern easier to recognize.
+
+Matplotlib is a Python visualization library used to create line charts, bar charts, scatter plots, and other graphics. The usual structure is to create a figure and axes, draw the data, label the chart, and display or save it.
+
+
