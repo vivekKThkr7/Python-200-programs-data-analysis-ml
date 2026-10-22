@@ -406,3 +406,15 @@ QequestException    A border request-related exception
 199  ->> Training and evaluting a maching-learning model
 200  ->> Final capstone - Data Analysins and AI Pipeline
 
+
+
+Program 196 ; Grouping and Analysing Data 
+
+Suppose your company to knoww how much revenue each product category generated. 
+
+You could loop through every record and calculate totals manually, but Pandas has a convenient operation called groupy()
+
+groupby()  ->> group redcords according to a particular column and then lets you calculate a stastic for each group.
+
+pandas describes this as a split-apply-combinr operation: split the data into groups, calculate something for each group, and combine the results.
+
