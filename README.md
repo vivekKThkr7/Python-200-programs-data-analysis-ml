@@ -428,3 +428,29 @@ Numbers and table are useful, but a chart can make a pattern easier to recognize
 Matplotlib is a Python visualization library used to create line charts, bar charts, scatter plots, and other graphics. The usual structure is to create a figure and axes, draw the data, label the chart, and display or save it.
 
 
+Program 198 Understanding machine Learning and Spitting Data
+
+Machine learing is a field of AI where models learn patterns from data and using those patterns from data and use those patterns to make predictions. 
+
+What are features and targets?
+Imagine you want a program to identify a ype of flower based on its measurements. The input measurements are called features. 
+
+The answer the model should predict is called the target or label.
+
+    Flower measurements
+            ↓
+        Features
+            ↓
+    Machine-learning model
+            ↓
+    Predicted flower type
+
+
+For our example, we'll use the Iris dataset available through scikit-learn. It has 150 flower samples, four numerical measurements per sample, and three flower classes. Scikit-learn provides helper tools for splitting data into training and testing subsets.
+
+Q. Why split Data?
+
+We normally seperate a dataset into: 
+Training data: used to teach the model patterns.
+Testing data: used to evaluate how the trained model perfroms on data it did not train on. 
+
