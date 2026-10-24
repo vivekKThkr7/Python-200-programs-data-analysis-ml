@@ -454,3 +454,29 @@ We normally seperate a dataset into:
 Training data: used to teach the model patterns.
 Testing data: used to evaluate how the trained model perfroms on data it did not train on. 
 
+
+program 199 ; Training and Evaluation a Machine-learning Model
+
+What does training a model means?
+->> In machine learning, we give an algorithm examples so it can learn pattern from data.
+For the Iris dataset.
+Features (X) are measurements of flowers.
+Labels (y) identify the flower species.
+Training data is used to fit the model. 
+Test data is reserved to evaluate how well the model predicts examples it hasn't trained on. 
+
+
+The process is :
+        Dataset
+    Flower measurement and species lables
+            |
+        Train/Test split
+    Seperate training examples from test examples
+            |
+        Train the model
+    Learn patterns from training data.
+            |
+        Evaluate the model
+    Compare predections with the correct test labels.
+
+        
