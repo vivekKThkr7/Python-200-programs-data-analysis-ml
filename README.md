@@ -480,3 +480,21 @@ The process is :
     Compare predections with the correct test labels.
 
         
+
+
+Program 200 ; Final Capstone: Data Analysis and AI Pipeline
+
+Here we are going to bring NumPy, Pandas, visualization and machine learning. 
+
+definition ->> A data-analysis and AI Pipeline is a series of connected setps that turns raw into useful information and model predection. 
+
+In ths capstone Porgram:
+1. Load a dataset
+2. Explore it with pandas
+3. Inspect missing and duplicate records.
+4. Summarize and visualize the data.
+5. Split the features and labels
+6. Train a machine-learning model.
+7. Evaluate its predections.
+8. Try a predection on a test example
+
