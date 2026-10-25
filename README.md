@@ -498,3 +498,15 @@ In ths capstone Porgram:
 7. Evaluate its predections.
 8. Try a predection on a test example
 
+
+
+<!-- What makes this capstone? -->
+
+This is no longer just a python exercie. We're connecting different tools to complete a whole workflow. 
+1. Pandas: Inspect and summarize the dataset.
+2. matplotlib: Visualize
+3. scikit_learn : Train a model and make predection. 
+4. Evaluation metrics : assess model performance.
+
+One important real-world lession: missing values and duplicates should be handled according to the meaning of the dataset, not automatically remoived just because they exist.
+
