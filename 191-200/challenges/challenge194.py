@@ -18,4 +18,3 @@ df.to_csv("challenge194_sales.csv", index=False)
 loaded = pd.read_csv("challenge194_sales.csv")
 print(loaded)
 print("Total revenue:", loaded["Revenue"].sum())    # 180
- 
