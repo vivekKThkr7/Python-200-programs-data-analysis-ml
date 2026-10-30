@@ -1,512 +1,116 @@
-<!-- # somthing -->
-<!-- Trying somthing new -->
 
-<!-- Python is high-level programming language to build applications, automate tasks, analyze data, develop websites, and build AI/ML systems. -->
+Python 200 Programs: From Beginner to Data Analysis & Machine Learning
 
-Programs 91 -100 : Functions -- Turing Code into Reusable Tools
+A hands-on Python learning repository containing 200 programs and practice challenges, organized into progressive sets. The project begins with Python fundamentals and problem-solving, then progresses toward data analysis and introductory machine learning.
 
-** Functions let us write a piece of logic once and reuse it whenever we need it. 
+This repository documents my learning journey through practical coding exercises. The goal was not only to learn Python syntax, but also to understand how to break problems into steps, write code, inspect results, debug errors, and apply Python libraries to real data.
 
-Definition -> A function is a named block of code that performs a specific task.
+Learning Goals
+1. Build a strong foundation in Python syntax, variables, data types, and input/output.
+2. Practice decision-making, loops, and algorithmic problem-solving.
+3. Work with strings and Python collections.
+4. Use functions, modules, files, and exception handling.
+5. Understand object-oriented programming and more advanced Python concepts.
+6. Analyze numerical and tabular data with NumPy and pandas.
+7. Visualize data and build introductory machine-learning workflows with scikit-learn.
+8. Develop the habit of testing code, checking results, and correcting logical errors.
 
 
-100 / 200 -> 50 % Completed  💐  (Halfway Point)
+Curriculum Overview: Programs 1–200
+| Program numbers | Topics | Main skills practiced |
+|---|---|---|
+| **1–20** | Python fundamentals and data types | `print()`, `input()`, variables, arithmetic, strings, integers, floats, booleans, type conversion, and comparisons. |
+| **21–40** | Conditions and decision-making | `if`, `elif`, `else`, logical operators, nested conditions, range checks, eligibility rules, and menu-based decision programs. |
+| **41–60** | Loops and number algorithms | `while`, `for`, `range()`, nested loops, counters, accumulators, `break`, digit processing, reversing numbers, palindromes, factorials, prime checks, and number analysis. |
+| **61–80** | Strings and collections | String indexing, slicing, searching, counting, cleaning and transforming text, followed by working with Python collections such as lists and tuples. |
+| **81–100** | Dictionaries, sets, and functions | Organizing related data, working with unique values, creating reusable functions, and solving problems with structured data. |
+| **101–120** | Files, exceptions, and modules | Reading and writing files, handling errors with `try`/`except`, and organizing code using modules. |
+| **121–140** | Object-oriented programming (OOP) | Classes, objects, attributes, methods, and core object-oriented design concepts. |
+| **141–160** | Advanced Python | More advanced language features and techniques that build on the fundamentals and improve code quality. |
+| **161–180** | Practical programming and problem-solving | Applying earlier concepts to more complete programs and multi-step problems. |
+| **181–190** | Advanced problem-solving and preparation for data work | Further practice leading into numerical computing, data analysis, and AI-oriented programming. |
+| **191–200** | NumPy, pandas, visualization, and machine learning | Numerical arrays, statistics, DataFrames, CSV workflows, data cleaning, grouping, visualization, data splitting, model training/evaluation, and a final capstone. |
 
-1 - 20 Fundamentsls
-21 - 40 Decision making
-41 - 60 Loops & Algorithms
-61 - 70 Strings
-71 - 90 Lists & Structured Data
-91 - 100 Functions
+Final 10 Programs: Data Analysis and AI Foundations
 
+| Program | Topic | What it practices |
+|---|---|---|
+| **191** | NumPy numerical arrays | Creating arrays, performing element-wise calculations, and accessing array elements. |
+| **192** | NumPy calculations and statistics | Calculating totals, means, medians, minimums, maximums, and standard deviation. |
+| **193** | pandas DataFrames | Creating tabular data, adding calculated columns, and filtering records. |
+| **194** | Reading and writing CSV files | Saving a DataFrame to CSV, loading it again, and analyzing the loaded data. |
+| **195** | Data cleaning | Finding missing values and duplicate records, and practicing suitable cleaning operations. |
+| **196** | Grouping and analysis | Summarizing data by categories and comparing group-level results. |
+| **197** | Data visualization | Creating charts to communicate patterns in data. |
+| **198** | Understanding machine learning and data splitting | Separating features and labels, and preparing training and test sets with `train_test_split()`. |
+| **199** | Training and evaluating a model | Training classifiers, generating predictions, and evaluating accuracy and classification results. |
+| **200** | Data Analysis and AI Pipeline capstone | Combining data inspection, cleaning checks, grouped analysis, visualization, model training, prediction, and evaluation in one workflow. |
 
-Program 101 - 110 Dictionaries -- Storing Data with meaning
+Capstone Project
 
-marks = [75, 82, 85]  -> (List)
+The final capstone uses the Wine dataset from scikit-learn. It demonstrates an end-to-end introductory workflow:
 
+1. Load the dataset and create a pandas DataFrame.
+2. Inspect rows, dimensions, descriptive statistics, missing values, and duplicate rows.
+3. Compare selected measurements across classes.
+4. Create and save a scatter plot.
+5. Separate features from target labels and split the data into training and test sets.
+6. Use a scikit-learn pipeline to scale features and train a Logistic Regression classifier.
+7. Evaluate predictions with accuracy, a confusion matrix, and a classification report.
+8. Predict the class of a held-out example and compare it with the actual label.
 
-<!-- DDictionary -->
-student = {
-    "name": "Vivek",
-    "age": 27,
-    "country": "Nepal"
-}
+The test score is a result from one particular split of this dataset. It is a learning exercise, not a guarantee of performance on new data or a production-ready AI system.
 
-<!-- Important things to Notice -->
 
-1. variable
+Tools and Libraries
 
-age = 27
+1. Python — programming language used for the exercises.
+2. NumPy — numerical arrays and mathematical operations.
+3. pandas — tabular data handling and analysis.
+4. Matplotlib — charts and data visualization.
+5. scikit-learn — sample datasets, data splitting, preprocessing, machine-learning models, and evaluation metrics.
+6. Git, GitHub, and GitHub Codespaces — version control, repository hosting, and cloud-based development.
 
+Most early exercises use Python's built-in features. The data-analysis and machine-learning exercises require the relevant external libraries.
 
-2. List
 
-age = [20, 24, 38, 30]
 
+Getting Started
 
-3. Dictionary
+1. Open the repository
+Open this repository on GitHub. If you want to run the programs on your own computer, clone the repository first:
 
-ages = {
-    "Vivek": 27,
-    "Ram": 25,
-    "Sita": 30
-}
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+cd YOUR-REPOSITORY
+Replace YOUR-USERNAME and YOUR-REPOSITORY with your GitHub username and repository name.
 
+Alternatively, open the repository in GitHub Codespaces and use its terminal.
 
-<!-- Programms 111 - 120: Tuples, sets, & choosing the right Data Structure -->
+2. Install the libraries
+If the repository does not already have an environment with the required libraries, install them with:
 
-<!-- Tuple : is a collection of values that normally should not be changed -->
+python -m pip install numpy pandas matplotlib scikit-learn
+3. Run a program
+Navigate to the relevant Python file and run it from the terminal. For example:
 
-eg numbers = (10, 20, 30, 40, 50)
-looks similar to lsit but 
-numbers = [10, 20, 30, 40, 50]
+python path/to/program.py
+Replace path/to/program.py with the actual path and filename in this repository. Some programs create output files, such as CSV files or chart images, in the current working directory.
 
-<!-- list -> can be changed -->
-<!-- Tuple cannot be changed -->
 
+How the Project Was Practiced
+1. Study a concept and a short example.
+2. Write a related challenge independently.
+3. Run the code and inspect the output.
+4. Debug errors and improve the logic when necessary.
+5. Commit each completed set to GitHub to keep a record of progress.
 
 
 
-<!-- List
-[10, 20, 20, 30]
-→ ordered collection
-→ duplicates allowed
-→ changeable
+Future Learning
+This repository provides a foundation for further study. Possible next topics include functions and code structure in larger projects, testing, data validation, exploratory data analysis, statistics, feature engineering, cross-validation, model selection, model persistence, APIs, and deeper machine-learning or AI application development.
 
-Tuple
-(10, 20, 20, 30)
-→ ordered collection
-→ duplicates allowed
-→ not changeable
 
-Set
-{10, 20, 30}
-→ unique values
-→ duplicates removed -->
 
-
-
-🧠 DATA STRUCTURE CHEAT SHEET
-
-This is one of the most important tables in your course.
-
-Structure	 Example   Changeable?	Duplicates?	   Main idea
-List	     [1,2,3]	✅	        ✅	        Ordered collection
-Tuple	     (1,2,3)	❌	        ✅	        Fixed collection
-Set	         {1,2,3}	✅	        ❌	        Unique values
-Dictionary	 {"a":1}	✅	      Keys unique	 Key → value
-
-
-<!-- Simple memory trick
-LIST       → MANY VALUES
-TUPLE      → FIXED VALUES
-SET        → UNIQUE VALUES
-DICTIONARY → NAMED VALUES -->
-
-
-
-
-
-
-
-
-
-
-<!-- 121 - 130 :  -->
-
-# What is an exception?
-
-# Exception : error that happens while the program is running.
-
-age = int(input("Enter your age: "))
-
-# any value except integer return an error 
-
-# eg: if someone type abcd it gives ValueError
-
-
-
-Program 131 - 140 : OOP - Class & Objects
-130/200 -> 65%
-
-<!-- What is OOP? -->
-
-Its a way of organizing a program around objects data and behavior.
-
-For example, think about a bank account.
-
-It has data:
-
-account holder
-balance
-account number
-
-And it has behavior:
-
-deposit
-withdraw
-check balance
-
-Instead of keeping everything scattered around, OOP lets us package related things together.
-
-Think:
-
-BANK ACCOUNT OBJECT
-────────────────────
-Data:
-  owner
-  balance
-
-Actions:
-  deposit()
-  withdraw()
-  check_balance()
-
-That's the core idea.
-
-
-
-Term   -----> Simple Meaning
-Class          Blueprint
-Object        Actual thing created from class
-Attribute     Data belonging to the onjebt
-Method        Function benlonging to object.
-self          current object
-_init_( )     Setup when object is created
-instance      Another word for an object
-
-
-
-
-
-
-
-
-
-
-🧠 OOP FUNDAMENTAL CHECKPOINT
-
-I especially want you to understand these four levels.
-
-Level 1 — Class
-class Student:
-
-Blueprint.
-
-Level 2 — Object
-student = Student(...)
-
-Actual thing.
-
-Level 3 — Inheritance
-class Student(Person):
-
-Student gets reusable behavior from Person.
-
-Level 4 — Polymorphism
-for employee in employees:
-    employee.work()
-
-Different objects can perform the same method differently.
-
-🔥 Your biggest fundamental concept — one more time
-
-Look at:
-
-employees = [
-    Developer("Ram"),
-    Designer("Sita")
-]
-
-Here:
-
-employees
-   ↓
-WHOLE LIST
-
-Inside:
-
-for employee in employees:
-employees → whole collection
-employee  → one object
-
-Then:
-
-employee.work()
-
-means:
-
-Call work() on this particular object.
-
-This is the same fundamental pattern you've been learning since lists:
-
-marks → whole list
-mark  → one item
-
-and now:
-
-employees → whole list
-employee  → one object
-
-🔥 Same thinking. Different data.
-
-🧠 Four OOP Terms — Simple Definitions
-Concept	Simple meaning
-Encapsulation	Control access to object data
-Inheritance	Child reuses parent
-Overriding	Child changes inherited behavior
-Polymorphism	Same method call, different behavior
-
-
-
-<!-- Program 151 to 160 : Writing Cleaner, more Practical Python -->
-151 → import
-152 → useful built-in modules
-153 → create your own module
-154 → variable scope
-155 → global vs local
-156 → list comprehension
-157 → comprehension with condition
-158 → dictionary comprehension
-159 → lambda
-160 → combining these ideas
-
-
-
-
-
-<!-- Programs 161–170: From Python Exercises to a Real Project -->
-<!-- 
-    User
- ↓
-Input
- ↓
-Validation
- ↓
-Data structure
- ↓
-Functions
- ↓
-File storage
- ↓
-Reports
- -->
-
-
- <!-- Programs 171–180: Making a Real Project Reliable -->
-<!-- IN this level we are going to learn how real Python programs are organized and used in practical work. -->
-
-<!-- Q. What is pathlib? -->
-
-Pathlib is a built-in python module used to work with; Files, Folders, File paths.
-Instead of treating a path as jsut a string, oython gives us a path object.
-
-Example:
-
-from pathlib import path
-
-file_path = path("notes.txt)
-
-here:
-file_path -> path object -> notes.txt
-
-
-
-
-from Program 176.py
-Q. Why not simply print an error inside the function?
-A. Because raising an exception allows the calling code to decide how to handle the problem. This helps separate the business logic from the application's response to errors.
-
-
-
-
-
-<!-- Python Set 19  -->
-<!-- Our learning plan -->
-<!-- 
-
-Program	     Topic
-181	        What an API is and how to make a GET request
-182	        HTTP status codes and successful responses
-183	        Query parameters
-184	        Reading and processing API data
-185	        Handling API errors and timeouts
-186	        Sending data using POST
-187	        Working with nested JSON
-188	        Building reusable API functions
-189	        Saving API data into a JSON file
-190	        Mini project: User Directory API
-
- -->
-
-
-# what is requests?
-#  It is Python library that makes it easier to communicate with web serrvers. unlike Pathlib, JSON and datatime,  it is not part of Python's standard library, so need to be installed form the terminal. 
-
-# python -m pip install requests
-
-# What is API?
-
-# API -> APPLICATION PROGRAMMING INTERFACE.
-# API as a way for one application to request information or services from another application.
-
-python program (request a post) <==> API/Web server(Receives the request and returns data) <==> Python Program (Read thye response and uses the data)
-
-
-API request often involves aa URL called an endpoint. 
-<!--  https://jsonplaceholder.typicode.com/posts/1 -->
-
-
-<!-- What is HTTP -->
-<!-- HTTP is a protocal that allows clients and servers to communicate over a network. -->
-
-<!--   GET   ==> Retrieve Information  -->
-<!--   POST ==>  Send data to a server -->
-
-<!-- What is Status code? -->
-<!-- An HTTP status code is a number that describes the result of a request. -->
-
-<!-- 
-Status   code	Meaning
-200	    Request succeeded
-201	    Resource created
-400	    Bad request
-401	    Authentication required or failed
-403	    Access forbidden
-404	    Resource not found
-500	    Internal server error
- -->
-
-
-<!-- Handling API Error and Timeout -->
-<!-- networks can fail, URLs can be incorrect. records can be missing, Server can become temporarily unavailable. -->
-<!-- What are the common request error? -->
-ERROR TYPE         Type Cause
-HTTPError           Unsuccessful HTTP atatus after checking the response
-Timeout             The request took too long without a timely response
-ConnectionError     A network connection problem
-QequestException    A border request-related exception
-
-
-
-
-
-<!-- 191 - 200 -->
-
-<!-- This is the foundation for progressing toward AI and data-driven applications. -->
-
-191  ->> NumPy - numberical arrays
-192  ->> NumPy - Calculation and statics
-193  ->> Pandas - DataFrames
-194  ->> Reading and writing CSV data
-195  ->> Cleaning Missing and duplicate data
-196  ->> Grouping and analysing data
-197  ->> Visualizing data analysing data 
-198  ->> Understanding machine-learning model
-199  ->> Training and evaluting a maching-learning model
-200  ->> Final capstone - Data Analysins and AI Pipeline
-
-
-
-Program 196 ; Grouping and Analysing Data 
-
-Suppose your company to knoww how much revenue each product category generated. 
-
-You could loop through every record and calculate totals manually, but Pandas has a convenient operation called groupy()
-
-groupby()  ->> group redcords according to a particular column and then lets you calculate a stastic for each group.
-
-pandas describes this as a split-apply-combinr operation: split the data into groups, calculate something for each group, and combine the results.
-
-
-
-
-Program 197 ; Visualizing Data with Matplotlib
-
-Numbers and table are useful, but a chart can make a pattern easier to recognize.
-
-Matplotlib is a Python visualization library used to create line charts, bar charts, scatter plots, and other graphics. The usual structure is to create a figure and axes, draw the data, label the chart, and display or save it.
-
-
-Program 198 Understanding machine Learning and Spitting Data
-
-Machine learing is a field of AI where models learn patterns from data and using those patterns from data and use those patterns to make predictions. 
-
-What are features and targets?
-Imagine you want a program to identify a ype of flower based on its measurements. The input measurements are called features. 
-
-The answer the model should predict is called the target or label.
-
-    Flower measurements
-            ↓
-        Features
-            ↓
-    Machine-learning model
-            ↓
-    Predicted flower type
-
-
-For our example, we'll use the Iris dataset available through scikit-learn. It has 150 flower samples, four numerical measurements per sample, and three flower classes. Scikit-learn provides helper tools for splitting data into training and testing subsets.
-
-Q. Why split Data?
-
-We normally seperate a dataset into: 
-Training data: used to teach the model patterns.
-Testing data: used to evaluate how the trained model perfroms on data it did not train on. 
-
-
-program 199 ; Training and Evaluation a Machine-learning Model
-
-What does training a model means?
-->> In machine learning, we give an algorithm examples so it can learn pattern from data.
-For the Iris dataset.
-Features (X) are measurements of flowers.
-Labels (y) identify the flower species.
-Training data is used to fit the model. 
-Test data is reserved to evaluate how well the model predicts examples it hasn't trained on. 
-
-
-The process is :
-        Dataset
-    Flower measurement and species lables
-            |
-        Train/Test split
-    Seperate training examples from test examples
-            |
-        Train the model
-    Learn patterns from training data.
-            |
-        Evaluate the model
-    Compare predections with the correct test labels.
-
-        
-
-
-Program 200 ; Final Capstone: Data Analysis and AI Pipeline
-
-Here we are going to bring NumPy, Pandas, visualization and machine learning. 
-
-definition ->> A data-analysis and AI Pipeline is a series of connected setps that turns raw into useful information and model predection. 
-
-In ths capstone Porgram:
-1. Load a dataset
-2. Explore it with pandas
-3. Inspect missing and duplicate records.
-4. Summarize and visualize the data.
-5. Split the features and labels
-6. Train a machine-learning model.
-7. Evaluate its predections.
-8. Try a predection on a test example
-
-
-
-<!-- What makes this capstone? -->
-
-This is no longer just a python exercie. We're connecting different tools to complete a whole workflow. 
-1. Pandas: Inspect and summarize the dataset.
-2. matplotlib: Visualize
-3. scikit_learn : Train a model and make predection. 
-4. Evaluation metrics : assess model performance.
-
-One important real-world lession: missing values and duplicates should be handled according to the meaning of the dataset, not automatically remoived just because they exist.
+Note
+This is an educational learning project. The examples are intended for practice and demonstration; they should be reviewed and adapted before being used in real production systems.
 
