@@ -1,116 +1,160 @@
+# Python 200 Programs: From Fundamentals to Data Analysis and Introductory Machine Learning
 
-Python 200 Programs: From Beginner to Data Analysis & Machine Learning
+A hands-on Python learning repository containing **200 programs and 200 related practice challenges**, arranged into 20 progressive exercise sets. The project starts with Python fundamentals and problem-solving, then moves through functions, data structures, file handling, object-oriented programming, practical applications, API requests, data analysis, and introductory machine learning.
 
-A hands-on Python learning repository containing 200 programs and practice challenges, organized into progressive sets. The project begins with Python fundamentals and problem-solving, then progresses toward data analysis and introductory machine learning.
+This repository documents my learning through practical coding. I used each set to study a concept, write a program, attempt a related challenge, run the code, inspect the result, and correct mistakes. The goal was to build problem-solving skills and become more comfortable applying Python to practical tasks.
 
-This repository documents my learning journey through practical coding exercises. The goal was not only to learn Python syntax, but also to understand how to break problems into steps, write code, inspect results, debug errors, and apply Python libraries to real data.
+## Learning roadmap
 
-Learning Goals
-1. Build a strong foundation in Python syntax, variables, data types, and input/output.
-2. Practice decision-making, loops, and algorithmic problem-solving.
-3. Work with strings and Python collections.
-4. Use functions, modules, files, and exception handling.
-5. Understand object-oriented programming and more advanced Python concepts.
-6. Analyze numerical and tabular data with NumPy and pandas.
-7. Visualize data and build introductory machine-learning workflows with scikit-learn.
-8. Develop the habit of testing code, checking results, and correcting logical errors.
+The table below follows the topics covered by the actual exercise folders in this repository.
 
+| Programs | Main topics | Skills practised | Exercise set |
+|---|---|---|---|
+| **1–20** | Python fundamentals | `print()`, `input()`, variables, arithmetic, data types, type conversion, strings, comparisons, and Boolean logic. | [`Basic_first_10`](Basic_first_10/) · [`11-20`](11-20/) |
+| **21–40** | Conditions and decision-making | `if`, `elif`, `else`, comparison and logical operators, nested decisions, and practical decision programs. | [`21-30`](21-30/) · [`31-40`](31-40/) |
+| **41–60** | Loops and number algorithms | `for`, `while`, repetition, counters, accumulators, number patterns, digit processing, palindrome checks, factorials, prime checks, and number analysis. | [`41-50`](41-50/) · [`51-60`](51-60/) |
+| **61–70** | String handling | String length, indexing, negative indexing, slicing, reversing, case conversion, whitespace handling, searching, and word counting. | [`61-70`](61-70/) |
+| **71–90** | Lists and structured list processing | Creating and updating lists, indexing, iteration, totals and averages, searching, filtering, duplicate handling, nested lists, and list analysis. | [`71-80`](71-80/) · [`81-90`](81-90/) |
+| **91–100** | Functions | Defining and calling functions, parameters, return values, conditions inside functions, combining functions, and a student analyser. | [`91-100`](91-100/) |
+| **101–110** | Dictionaries | Key-value data, reading and updating values, adding and deleting keys, checking membership, iteration, and analysing student records. | [`101-110`](101-110/) |
+| **111–120** | Tuples, sets, and data structures | Tuple access and immutability, set operations, membership, removing duplicates, and choosing between lists, tuples, and sets. | [`111-120`](111-120/) |
+| **121–130** | File handling and exceptions | Creating, reading, writing, and appending files; using `with open()`; handling exceptions with `try` and `except`; and validating input. | [`121-130`](121-130/) |
+| **131–140** | OOP fundamentals | Classes, objects, attributes, constructors, methods, object state, and a simple bank-account example. | [`131-140`](131-140/) |
+| **141–150** | Core OOP concepts | Encapsulation, getters and setters, inheritance, overriding, `super()`, polymorphism, and a mini OOP system. | [`141-150`](141-150/) |
+| **151–160** | Modules and useful Python features | Imports, built-in and custom modules, variable scope, local and global variables, list and dictionary comprehensions, lambda functions, and combining concepts. | [`151-160`](151-160/) |
+| **161–170** | Practical project: expense tracker | Input validation, menus, dictionaries and lists for expense records, totals, category filtering, JSON storage, loading saved data, and a mini expense tracker. | [`161-170`](161-170/) |
+| **171–180** | Writing more reliable Python programs | `pathlib`, dates and times, CSV files, dataclasses, type hints, custom exceptions, assertions, debugging, refactoring, and a mini inventory system. | [`171-180`](171-180/) |
+| **181–190** | APIs and HTTP requests | Using the `requests` library, GET and POST requests, HTTP responses and status codes, query parameters, JSON data, error handling, timeouts, reusable functions, and a user-directory API project. | [`181-190`](181-190/) |
+| **191–200** | Data analysis and introductory machine learning | NumPy arrays and calculations, pandas DataFrames, CSV workflows, data cleaning, grouping, Matplotlib charts, train/test splitting, model training, predictions, and evaluation. | [`191-200`](191-200/) |
 
-Curriculum Overview: Programs 1–200
-| Program numbers | Topics | Main skills practiced |
+## Programs 191–200: Data analysis and machine-learning foundations
+
+The final ten programs introduce common tools used in Python data analysis and introductory machine learning.
+
+| Program | Topic | What it practises |
 |---|---|---|
-| **1–20** | Python fundamentals and data types | `print()`, `input()`, variables, arithmetic, strings, integers, floats, booleans, type conversion, and comparisons. |
-| **21–40** | Conditions and decision-making | `if`, `elif`, `else`, logical operators, nested conditions, range checks, eligibility rules, and menu-based decision programs. |
-| **41–60** | Loops and number algorithms | `while`, `for`, `range()`, nested loops, counters, accumulators, `break`, digit processing, reversing numbers, palindromes, factorials, prime checks, and number analysis. |
-| **61–80** | Strings and collections | String indexing, slicing, searching, counting, cleaning and transforming text, followed by working with Python collections such as lists and tuples. |
-| **81–100** | Dictionaries, sets, and functions | Organizing related data, working with unique values, creating reusable functions, and solving problems with structured data. |
-| **101–120** | Files, exceptions, and modules | Reading and writing files, handling errors with `try`/`except`, and organizing code using modules. |
-| **121–140** | Object-oriented programming (OOP) | Classes, objects, attributes, methods, and core object-oriented design concepts. |
-| **141–160** | Advanced Python | More advanced language features and techniques that build on the fundamentals and improve code quality. |
-| **161–180** | Practical programming and problem-solving | Applying earlier concepts to more complete programs and multi-step problems. |
-| **181–190** | Advanced problem-solving and preparation for data work | Further practice leading into numerical computing, data analysis, and AI-oriented programming. |
-| **191–200** | NumPy, pandas, visualization, and machine learning | Numerical arrays, statistics, DataFrames, CSV workflows, data cleaning, grouping, visualization, data splitting, model training/evaluation, and a final capstone. |
+| **191** | NumPy arrays | Creating numerical arrays, performing element-wise calculations, and accessing array elements. |
+| **192** | NumPy calculations and statistics | Calculating a total, mean, median, maximum, and minimum. |
+| **193** | pandas DataFrames | Creating tabular data, adding a calculated column, and filtering rows. |
+| **194** | Reading and writing CSV data | Saving a DataFrame to a CSV file, reading it back, and calculating a total. |
+| **195** | Data cleaning | Identifying missing values, filling missing prices, and removing exact duplicate rows in an example dataset. |
+| **196** | Grouping and analysis | Grouping records by category and calculating summary statistics. |
+| **197** | Data visualization | Creating and saving a bar chart with Matplotlib. |
+| **198** | Preparing data for machine learning | Separating features and labels and creating stratified training and test sets with the Iris dataset. |
+| **199** | Training and evaluating a model | Scaling features, training a Logistic Regression classifier, generating predictions, and reviewing evaluation metrics. |
+| **200** | Data Analysis and AI Pipeline capstone | Bringing data inspection, cleaning checks, grouped analysis, visualization, model training, prediction, and evaluation into one workflow. |
 
-Final 10 Programs: Data Analysis and AI Foundations
+## Final capstone
 
-| Program | Topic | What it practices |
-|---|---|---|
-| **191** | NumPy numerical arrays | Creating arrays, performing element-wise calculations, and accessing array elements. |
-| **192** | NumPy calculations and statistics | Calculating totals, means, medians, minimums, maximums, and standard deviation. |
-| **193** | pandas DataFrames | Creating tabular data, adding calculated columns, and filtering records. |
-| **194** | Reading and writing CSV files | Saving a DataFrame to CSV, loading it again, and analyzing the loaded data. |
-| **195** | Data cleaning | Finding missing values and duplicate records, and practicing suitable cleaning operations. |
-| **196** | Grouping and analysis | Summarizing data by categories and comparing group-level results. |
-| **197** | Data visualization | Creating charts to communicate patterns in data. |
-| **198** | Understanding machine learning and data splitting | Separating features and labels, and preparing training and test sets with `train_test_split()`. |
-| **199** | Training and evaluating a model | Training classifiers, generating predictions, and evaluating accuracy and classification results. |
-| **200** | Data Analysis and AI Pipeline capstone | Combining data inspection, cleaning checks, grouped analysis, visualization, model training, prediction, and evaluation in one workflow. |
+The final set contains a complete example and a related independent challenge:
 
-Capstone Project
+- **Main Program 200** (`191-200/200.py`) uses the **Iris dataset**. It creates a pandas DataFrame, inspects the data, checks for missing and duplicate rows, summarizes measurements by species, displays a scatter plot, trains a scaled Logistic Regression model, and evaluates predictions.
+- **Challenge 200** (`191-200/challenges/challenge200.py`) uses the **Wine dataset**. It follows a similar workflow and saves a scatter plot as `wine_scatter.png`.
 
-The final capstone uses the Wine dataset from scikit-learn. It demonstrates an end-to-end introductory workflow:
+The evaluation score produced by either script depends on its dataset and train/test split. These are educational examples for learning the workflow; they are not production-ready machine-learning systems or guarantees of performance on new data.
 
-1. Load the dataset and create a pandas DataFrame.
-2. Inspect rows, dimensions, descriptive statistics, missing values, and duplicate rows.
-3. Compare selected measurements across classes.
-4. Create and save a scatter plot.
-5. Separate features from target labels and split the data into training and test sets.
-6. Use a scikit-learn pipeline to scale features and train a Logistic Regression classifier.
-7. Evaluate predictions with accuracy, a confusion matrix, and a classification report.
-8. Predict the class of a held-out example and compare it with the actual label.
+## Tools and libraries
 
-The test score is a result from one particular split of this dataset. It is a learning exercise, not a guarantee of performance on new data or a production-ready AI system.
+- **Python** — the programming language used throughout the exercises.
+- **Requests** — sends HTTP requests in Programs 181–190.
+- **NumPy** — numerical arrays and calculations.
+- **pandas** — tabular data handling and analysis.
+- **Matplotlib** — charts and data visualization.
+- **scikit-learn** — sample datasets, data splitting, preprocessing, machine-learning models, and evaluation metrics.
+- **Git, GitHub, and GitHub Codespaces** — version control, repository hosting, and the cloud development environment used during the project.
 
+The early exercises mainly use Python's standard library. The API, data-analysis, and machine-learning exercises also require the external libraries listed in the setup instructions below.
 
-Tools and Libraries
+## Getting started
 
-1. Python — programming language used for the exercises.
-2. NumPy — numerical arrays and mathematical operations.
-3. pandas — tabular data handling and analysis.
-4. Matplotlib — charts and data visualization.
-5. scikit-learn — sample datasets, data splitting, preprocessing, machine-learning models, and evaluation metrics.
-6. Git, GitHub, and GitHub Codespaces — version control, repository hosting, and cloud-based development.
+### Requirements
 
-Most early exercises use Python's built-in features. The data-analysis and machine-learning exercises require the relevant external libraries.
+- Python **3.10 or newer** is recommended.
+- Git, if you are cloning the repository to your computer.
+- An internet connection for the API exercises in Programs 181–190.
 
+### Option 1: GitHub Codespaces
 
+1. Open this repository on GitHub.
+2. Select **Code** and open or create a Codespace.
+3. In the Codespaces terminal, install the external libraries:
 
-Getting Started
+   ```bash
+   python -m pip install requests numpy pandas matplotlib scikit-learn
+   ```
 
-1. Open the repository
-Open this repository on GitHub. If you want to run the programs on your own computer, clone the repository first:
+4. Run a program from the repository root. For example:
 
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-cd YOUR-REPOSITORY
-Replace YOUR-USERNAME and YOUR-REPOSITORY with your GitHub username and repository name.
+   ```bash
+   python "191-200/191.py"
+   ```
 
-Alternatively, open the repository in GitHub Codespaces and use its terminal.
+### Option 2: Run on a local computer
 
-2. Install the libraries
-If the repository does not already have an environment with the required libraries, install them with:
+Clone the repository and move into its folder:
 
-python -m pip install numpy pandas matplotlib scikit-learn
-3. Run a program
-Navigate to the relevant Python file and run it from the terminal. For example:
+```bash
+git clone https://github.com/vivekKThkr7/Python-200-programs-data-analysis-ml.git
+cd Python-200-programs-data-analysis-ml
+```
 
-python path/to/program.py
-Replace path/to/program.py with the actual path and filename in this repository. Some programs create output files, such as CSV files or chart images, in the current working directory.
+Create and activate a virtual environment:
 
+```bash
+python -m venv .venv
+```
 
-How the Project Was Practiced
-1. Study a concept and a short example.
-2. Write a related challenge independently.
-3. Run the code and inspect the output.
-4. Debug errors and improve the logic when necessary.
-5. Commit each completed set to GitHub to keep a record of progress.
+**Windows PowerShell:**
 
+```powershell
+.venv\Scripts\Activate.ps1
+```
 
+**macOS or Linux:**
 
-Future Learning
-This repository provides a foundation for further study. Possible next topics include functions and code structure in larger projects, testing, data validation, exploratory data analysis, statistics, feature engineering, cross-validation, model selection, model persistence, APIs, and deeper machine-learning or AI application development.
+```bash
+source .venv/bin/activate
+```
 
+Install the libraries used by the API, data-analysis, and machine-learning exercises:
 
+```bash
+python -m pip install requests numpy pandas matplotlib scikit-learn
+```
 
-Note
-This is an educational learning project. The examples are intended for practice and demonstration; they should be reviewed and adapted before being used in real production systems.
+### Running a program or challenge
 
+Run the command from the repository's root directory, replacing the example path with the program you want to practise:
+
+```bash
+python "191-200/191.py"
+```
+
+For a challenge, use the path to its file inside that set's challenge folder. For example:
+
+```bash
+python "191-200/challenges/challenge191.py"
+```
+
+**Important:** Run exercises from the repository root unless a program says otherwise. Some programs read or write files using relative paths, so running them from a different working directory may cause Python not to find the expected files. Some exercises also ask for keyboard input or create output files such as CSV files and chart images.
+
+## How I practised
+
+1. Studied the concept and reviewed a short example.
+2. Wrote the related program.
+3. Attempted the matching challenge independently.
+4. Ran the code and checked the output.
+5. Debugged mistakes and improved the logic.
+6. Committed completed sets to GitHub to keep a record of progress.
+
+## Course notes
+
+The repository also includes **[COURSE_NOTES.md](COURSE_NOTES.md)**, which contains additional definitions, explanations, examples, and notes from the learning process.
+
+## Next learning goals
+
+Possible next steps include automated testing, data validation, exploratory data analysis, statistics, feature engineering, cross-validation, model selection, model persistence, and building larger Python applications that use APIs and machine learning.
+
+## Note
+
+This is an educational learning project. The programs demonstrate concepts and introductory workflows. Review, test, and adapt the code before using it in real-world or production systems.
