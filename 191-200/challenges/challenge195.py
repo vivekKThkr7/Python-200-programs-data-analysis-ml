@@ -1,9 +1,7 @@
 # Cleaning missing and duplicate data 
-# /Create an inventory dataFrame that contains:
-# At least one six rows.
-# At least one duplicated product record. 
-# One missing price
-# A quality column
+# Create an inventory DataFrame containing at least six rows,
+# at least one exact duplicate product record, one missing price,
+# and a quantity column.
 
 # This program should report the number of duplicate rows and missing values, remove genuine duplicate records, fill the missing price with the median price, create a stock_value column using price multiplied by quantity, and print the cleaned DataFrame.
 

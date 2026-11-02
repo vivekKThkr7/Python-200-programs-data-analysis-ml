@@ -5,7 +5,7 @@
 
 import numpy as np
 
-numbers = np.array([12, 18, 25, 30, 45])
+numbers = np.array([12, 13, 25, 30, 45])
 
 print("Original: ", numbers)
 print("Plus 5: ", numbers + 5)

@@ -11,7 +11,7 @@ def calculate_total(expenses):
 expenses = [
     {"description": "Lunch", "amount": 25},
     {"description": "Taxi", "amount": 15},
-    {"desciption": "Coffee", "amount": 10}
+    {"description": "Coffee", "amount": 10}
 ]
 
 

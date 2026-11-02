@@ -5,7 +5,7 @@
 # region
 # revenue
 
-# This program must calcualte total revenue by category, total revenue by region, and identify which category generated the highest revenue.
+# Calculate total revenue by category and region, then identify the category with the highest revenue.
 
 
 

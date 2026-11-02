@@ -1,7 +1,7 @@
 # Visualizing data ; Create a readable monthly sales chart.
-# Create a line chart with months on the X-axis, sales on the y-axis, a clear title, axis labels, makers and a grid. Save the chart to monthly_sales.png
+# Create a line chart with months on the X-axis, sales on the y-axis, a clear title, axis labels, markers, and a grid. Save the chart to monthly_sales.png
 
-# Hint: use  plt.plot(), plt.xlabel(), plt.ylabel, plt.title(), plt.grid() and plt.savefig().
+# Hint: use  plt.plot(), plt.xlabel(), plt.ylabel(), plt.title(), plt.grid() and plt.savefig().
 
 import matplotlib.pyplot as plt
  

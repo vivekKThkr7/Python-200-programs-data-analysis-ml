@@ -1,10 +1,6 @@
-# for i in range(3):
-#     for j in range(1, 4):
-#         print(j, end=" ")
-#     print()
+# Use nested loops to print a right-angled triangle of five rows of stars.
 
-
-for i in range(1, 6):
-    for j in range(i):
+for row in range(1, 6):
+    for _ in range(row):
         print("*", end="")
     print()

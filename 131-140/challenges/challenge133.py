@@ -1,6 +1,6 @@
 # Create
 # class Student 
-# Use _int_() to store: name, age
+# Use __init__() to store the name and age.
 # Create one student object
 
 class Student:

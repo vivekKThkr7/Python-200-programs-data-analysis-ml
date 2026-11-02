@@ -1,16 +1,21 @@
-# check whether the number is a palindrome
-number = int(input("Enter a number: "))
+# Check whether a non-negative integer is a palindrome.
+# Negative integers are not palindromes because of the minus sign.
 
-original = number
-reverse = 0
+number = int(input("Enter an integer: "))
 
-while number != 0:
-    digit = number % 10
-    reverse = reverse * 10 + digit
-    number = number // 10
-
-if original == reverse:
-    print("Palindrome")
-
+if number < 0:
+    print("Not a palindrome")
 else:
-    print("Not a Palindrone")
+    original = number
+    working_number = number
+    reverse = 0
+
+    while working_number > 0:
+        digit = working_number % 10
+        reverse = reverse * 10 + digit
+        working_number //= 10
+
+    if original == reverse:
+        print("Palindrome")
+    else:
+        print("Not a palindrome")

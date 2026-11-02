@@ -1,5 +1,5 @@
-# Ask for the temperature and print wheter the temperture is above 30 C
+# Ask for the temperature and print whether it is strictly above 30 C.
 
 temperature = float(input("Enter temperature in Celcius: "))
 
-print(temperature>=30)
+print(temperature > 30)
