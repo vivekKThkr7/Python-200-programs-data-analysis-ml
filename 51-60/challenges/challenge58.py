@@ -1,19 +1,10 @@
-# ask for number and print all of its factors
-# Ask for a number and print all of its factors.
+# Ask for a positive integer and print all of its positive factors.
 
-# Example:
+number = int(input("Enter a positive integer: "))
 
-# 12
-
-# 1
-# 2
-# 3
-# 4
-# 6
-# 12
-
-
-number = int(input("Ener a number: "))
-for divisor in range(1, number +1):
-    if number % divisor == 0:
-        print(divisor)
+if number <= 0:
+    print("Please enter a positive integer.")
+else:
+    for divisor in range(1, number + 1):
+        if number % divisor == 0:
+            print(divisor)

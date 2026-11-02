@@ -6,4 +6,7 @@ number2 = float(input("Enter second number: "))
 print(number1 +  number2)
 print(number1 - number2)
 print(number1 * number2)
-print(number1 / number2)
+if number2 == 0:
+    print("Division: cannot divide by zero")
+else:
+    print(number1 / number2)

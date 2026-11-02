@@ -1,5 +1,5 @@
-# NumPy Calcualtions and statistics
-# Create a NumPy array, calculate the total, medium, highest mark, lowest mark and standard deviation.
+# NumPy calculations and statistics.
+# Create a NumPy array and calculate the total, mean, median, highest mark, lowest mark, and standard deviation.
 
 import numpy as np
 

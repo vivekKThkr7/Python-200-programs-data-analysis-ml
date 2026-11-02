@@ -1,47 +1,33 @@
 # Mini ATM Decision Program
 
-# balance = 50000
-
-# amount = float(input("Enter withdrawl amount: "))
-
-# if amount <= 0:
-#     print("Invalid amount")
-
-# elif amount > balance:
-#     print("insufficient balance")
-
-# else:
-#     balance = balance - amount
-#     print("Withdrawl successful")
-#     print("Remaining Balance", balance)
-
-
 balance = 100000
 print("______ATM______")
-print("1. balance enqury")
-print("2. Cash Withdrawl")
-print("3. Balance Deposit")
+print("1. Balance enquiry")
+print("2. Cash withdrawal")
+print("3. Balance deposit")
 
-option = int(input("Enter any number: "))
+option = int(input("Enter an option: "))
+
 if option == 1:
-    print("Current available amount: ", balance)
-
+    print("Current available amount:", balance)
 elif option == 2:
-    withdrawl_amount = float(input(" Enter withdrawl amount: "))
+    withdrawal_amount = float(input("Enter withdrawal amount: "))
 
-    if withdrawl_amount> balance:
+    if withdrawal_amount <= 0:
+        print("Invalid amount. Enter an amount greater than zero.")
+    elif withdrawal_amount > balance:
         print("Insufficient balance")
-
-    elif withdrawl_amount <= balance:
-        print("Cash withdrawl: ", withdrawl_amount)
-        remaining_balance = balance- withdrawl_amount
-        print("Amount remaining in account: ", remaining_balance)
-
     else:
-        print("invalid Input")
+        balance -= withdrawal_amount
+        print("Cash withdrawal:", withdrawal_amount)
+        print("Amount remaining in account:", balance)
+elif option == 3:
+    deposit_amount = float(input("Enter amount to deposit: "))
 
-elif option ==3:
-    deposit_balance = float(input("Enter amount to deposit: "))
-
-    balance += deposit_balance
-    print("Available amount: ", balance)
+    if deposit_amount <= 0:
+        print("Invalid amount. Enter an amount greater than zero.")
+    else:
+        balance += deposit_amount
+        print("Available amount:", balance)
+else:
+    print("Invalid option. Please choose 1, 2, or 3.")

@@ -1,18 +1,21 @@
-# Create find_by_category(expenses, category) that returns only that expenses matching the category.
-# find_by_category(expenses, "food") -> the two food expenses.
-
+# Return only the expenses whose category matches the requested category.
 
 def find_by_category(expenses, category):
     matches = []
+    category = category.strip().lower()
+
     for expense in expenses:
-        matches.append(expense)
+        expense_category = expense.get("category", "").strip().lower()
+        if expense_category == category:
+            matches.append(expense)
 
     return matches
+
 
 expenses = [
     {"description": "Lunch", "amount": 25, "category": "food"},
     {"description": "Taxi", "amount": 15, "category": "travel"},
-    {"description": "Coffee", "amount": 10, "category": "food"}
+    {"description": "Coffee", "amount": 10, "category": "food"},
 ]
 
 food_expenses = find_by_category(expenses, "food")
