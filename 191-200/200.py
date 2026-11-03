@@ -1,9 +1,9 @@
-# Final Capstone: Data Analysis and AI Pipeline
+# Final Capstone: Data Analysis and Machine Learning with the Wine Dataset
 
 import pandas as pd
 import matplotlib.pyplot as plt
 
-from sklearn.datasets import load_iris
+from sklearn.datasets import load_wine
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
@@ -14,73 +14,87 @@ from sklearn.metrics import (
     classification_report
 )
 
-# 1. Load the dataset
-iris = load_iris()
+
+# 1-2. Load the Wine dataset and create a DataFrame
+wine = load_wine()
+
+feature_names = list(wine.feature_names)
+class_names = list(wine.target_names)
+class_labels = list(range(len(class_names)))
 
 df = pd.DataFrame(
-    iris.data,
-    columns=iris.feature_names
+    wine.data,
+    columns=feature_names
 )
 
-df["species"] = [
-    iris.target_names[index]
-    for index in iris.target
-]
+df["target"] = wine.target
 
-# 2. Explore the data
+
+# 3. Explore the dataset
 print("First five rows:")
 print(df.head())
 
-print("\nDataset shape:")
+print("\nDataset shape (rows, columns):")
 print(df.shape)
 
 print("\nSummary statistics:")
-print(df.describe())
+print(df.describe().round(2))
+
+
+# 4. Check data quality
+missing_count = df.isna().sum().sum()
+duplicate_count = df.duplicated().sum()
 
 print("\nMissing values:")
-print(df.isna().sum())
+print(missing_count)
 
-print("\nExact duplicate rows:")
-print(df.duplicated().sum())
+print("\nDuplicate rows:")
+print(duplicate_count)
 
-# For this exercise, remove missing rows and exact duplicates.
-# In real work, confirm that duplicates are erroneous records
-# before removing them; repeated measurements can be legitimate.
-df = df.dropna().drop_duplicates().reset_index(drop=True)
+# The built-in Wine dataset has no missing or duplicate rows,
+# so no data cleaning is required for this exercise.
 
-# 3. Analyze by flower species
-print("\nAverage measurements by species:")
+
+# 5. Analyze grouped statistics by wine class
+print("\nAverage values per wine class:")
 print(
-    df.groupby("species")[iris.feature_names]
+    df.groupby("target")[
+        ["alcohol", "flavanoids", "color_intensity"]
+    ]
     .mean()
     .round(2)
 )
 
-# 4. Visualize two measurements
-x_feature = "sepal length (cm)"
-y_feature = "petal length (cm)"
 
-for species in iris.target_names:
-    subset = df[df["species"] == species]
+# 6. Create and save a labelled scatter plot
+plt.figure(figsize=(7, 5))
+
+for class_id, class_name in enumerate(class_names):
+    subset = df[df["target"] == class_id]
 
     plt.scatter(
-        subset[x_feature],
-        subset[y_feature],
-        label=species
+        subset["alcohol"],
+        subset["flavanoids"],
+        label=class_name
     )
 
-plt.xlabel(x_feature)
-plt.ylabel(y_feature)
-plt.title("Iris Flower Measurements")
+plt.title("Wine: Alcohol vs Flavanoids")
+plt.xlabel("Alcohol")
+plt.ylabel("Flavanoids")
 plt.legend()
+plt.grid(True)
 plt.tight_layout()
-plt.show()
 
-# 5. Separate features and labels
-X = df[iris.feature_names]
-y = df["species"]
+plt.savefig("wine_scatter.png", dpi=150, bbox_inches="tight")
+plt.close()
 
-# 6. Split into training and testing data
+print("\nScatter plot saved to wine_scatter.png")
+
+
+# 7. Separate features and target labels, then split the data
+X = df[feature_names]
+y = df["target"]
+
 X_train, X_test, y_train, y_test = train_test_split(
     X,
     y,
@@ -89,7 +103,8 @@ X_train, X_test, y_train, y_test = train_test_split(
     stratify=y
 )
 
-# 7. Create and train the model
+
+# 8-9. Build the pipeline, train the model and make predictions
 model = make_pipeline(
     StandardScaler(),
     LogisticRegression(max_iter=1000)
@@ -97,19 +112,21 @@ model = make_pipeline(
 
 model.fit(X_train, y_train)
 
-# 8. Make predictions
 y_pred = model.predict(X_test)
 
-# 9. Evaluate the model
+
+# 10. Evaluate the model
+accuracy = accuracy_score(y_test, y_pred)
+
 print("\nModel accuracy:")
-print(round(accuracy_score(y_test, y_pred), 3))
+print(round(accuracy, 3))
 
 print("\nConfusion matrix:")
 print(
     confusion_matrix(
         y_test,
         y_pred,
-        labels=list(iris.target_names)
+        labels=class_labels
     )
 )
 
@@ -118,18 +135,36 @@ print(
     classification_report(
         y_test,
         y_pred,
-        labels=list(iris.target_names),
-        target_names=list(iris.target_names),
+        labels=class_labels,
+        target_names=class_names,
         zero_division=0
     )
 )
 
-# 10. Inspect a prediction for one test example
+
+# 11. Predict the class of one held-out sample
 sample = X_test.iloc[[0]]
 
-predicted_species = model.predict(sample)[0]
-actual_species = y_test.iloc[0]
+predicted_class = model.predict(sample)[0]
+actual_class = y_test.iloc[0]
+
+predicted_name = class_names[predicted_class]
+actual_name = class_names[actual_class]
 
 print("\nExample prediction:")
-print("Actual species:", actual_species)
-print("Predicted species:", predicted_species)
+print("Predicted wine class:", predicted_name)
+print("Actual wine class:", actual_name)
+
+
+# 12. Summarize the capstone results
+number_of_features = X.shape[1]
+number_of_classes = len(class_names)
+number_of_test_samples = len(y_test)
+
+print(
+    f"\nConclusion: The model used {number_of_features} numerical "
+    f"measurements and Logistic Regression to classify wines into "
+    f"{number_of_classes} classes. It achieved {accuracy:.1%} accuracy "
+    f"on {number_of_test_samples} unseen wines. The test set is "
+    f"relatively small, so performance may vary with a different split."
+)
