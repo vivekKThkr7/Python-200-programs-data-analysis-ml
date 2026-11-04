@@ -21,8 +21,8 @@ ax.set_ylabel("Revenue")
 
 fig.tight_layout()
 
-fig.savefig("sales_chart.png", dpi=150)
+fig.savefig("outputs/charts/sales_chart.png", dpi=150)
 
-print("Chart saved as sales_chart.png")
+print("Chart saved as outputs/charts/sales_chart.png")
 
 plt.show()

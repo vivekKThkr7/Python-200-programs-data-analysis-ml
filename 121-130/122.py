@@ -1,6 +1,6 @@
 # Read a file
 
-file = open("notes.txt", "r")
+file = open("outputs/text/notes.txt", "r")
 
 content = file.read()
 

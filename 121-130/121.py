@@ -1,6 +1,6 @@
 # create a file
 
-file = open("notes.txt", "w")
+file = open("outputs/text/notes.txt", "w")
 
 file.write("Hello Python!")
 

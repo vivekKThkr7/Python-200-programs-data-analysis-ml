@@ -1,6 +1,6 @@
 # Read multiple lines
 
-file = open("students.txt", "r")
+file = open("outputs/text/students.txt", "r")
 
 for line in file:
     print(line.strip())

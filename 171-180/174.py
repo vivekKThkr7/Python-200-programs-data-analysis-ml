@@ -2,7 +2,7 @@
 
 # from pathlib import Path
 
-# file_path = Path("notes.txt")
+# file_path = Path("outputs/text/notes.txt")
 
 # if file_path.exists():
 #     print("File already exists.")

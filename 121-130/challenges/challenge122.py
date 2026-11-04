@@ -1,7 +1,7 @@
 # Read hello.txt and print its contents.
 
 
-file = open("hello.txt", "r")
+file = open("outputs/text/hello.txt", "r")
 
 content = file.read()
 

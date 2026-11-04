@@ -59,9 +59,9 @@ plt.xlabel("Alcohol")
 plt.ylabel("Flavanoids")
 plt.legend()
 plt.grid(True)
-plt.savefig("wine_scatter.png", dpi=150, bbox_inches="tight")
+plt.savefig("outputs/charts/wine_scatter.png", dpi=150, bbox_inches="tight")
 plt.close()
-print("\nScatter plot saved to wine_scatter.png")
+print("\nScatter plot saved to outputs/charts/wine_scatter.png")
 
 
 # 7. Split with stratification
