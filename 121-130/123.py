@@ -1,6 +1,6 @@
 # Write multiple lines
 
-file = open("students.txt", "w")
+file = open("outputs/text/students.txt", "w")
 
 file.write("Ram\n")
 file.write("Sita\n")

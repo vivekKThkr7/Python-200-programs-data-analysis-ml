@@ -1,6 +1,6 @@
 # Create students.txt and save 5 students names, one per line.
 
-file = open("students1.txt", "w")
+file = open("outputs/text/students1.txt", "w")
 
 file.write("Ram\n")
 file.write("Hari\n")

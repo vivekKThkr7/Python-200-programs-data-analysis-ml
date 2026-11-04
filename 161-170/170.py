@@ -5,7 +5,7 @@ import json
 
 def load_expenses():
     try:
-        with open("expenses.json", "r") as file:
+        with open("outputs/json/expenses.json", "r") as file:
             return json.load(file)
 
     except FileNotFoundError:
@@ -13,7 +13,7 @@ def load_expenses():
 
 
 def save_expenses(expenses):
-    with open("expenses.json", "w") as file:
+    with open("outputs/json/expenses.json", "w") as file:
         json.dump(expenses, file, indent=4)
 
 

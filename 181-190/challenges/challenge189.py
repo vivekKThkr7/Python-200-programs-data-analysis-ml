@@ -1,6 +1,6 @@
 # Challenge 189 ; Save API Data to a JSON File
 
-# Retrieve posts belonging to user 1 and save the response to user_posts.json.
+# Retrieve posts belonging to user 1 and save the response to outputs/json/user_posts.json.
 
 # Requirements
 # 1. Retrieve the posts using the userId query parameter.
@@ -18,7 +18,7 @@ import json
 import requests
  
 url = "https://jsonplaceholder.typicode.com/posts"
-filename = "user_posts.json"
+filename = "outputs/json/user_posts.json"
  
 try:
     

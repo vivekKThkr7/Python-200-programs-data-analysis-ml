@@ -1,5 +1,5 @@
 # Visualizing data ; Create a readable monthly sales chart.
-# Create a line chart with months on the X-axis, sales on the y-axis, a clear title, axis labels, markers, and a grid. Save the chart to monthly_sales.png
+# Create a line chart with months on the X-axis, sales on the y-axis, a clear title, axis labels, markers, and a grid. Save the chart to outputs/charts/monthly_sales.png
 
 # Hint: use  plt.plot(), plt.xlabel(), plt.ylabel(), plt.title(), plt.grid() and plt.savefig().
 
@@ -14,7 +14,7 @@ plt.title("Monthly Sales (January - June)")
 plt.xlabel("Month")
 plt.ylabel("Sales")
 plt.grid(True)
-plt.savefig("monthly_sales.png", dpi=150, bbox_inches="tight")  # save BEFORE show
-print("Chart saved to monthly_sales.png")
+plt.savefig("outputs/charts/monthly_sales.png", dpi=150, bbox_inches="tight")  # save BEFORE show
+print("Chart saved to outputs/charts/monthly_sales.png")
 plt.show()
  

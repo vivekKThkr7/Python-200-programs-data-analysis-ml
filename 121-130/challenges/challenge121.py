@@ -3,7 +3,7 @@
 # I am learning programming.
 
 
-file = open("hello.txt", "w")
+file = open("outputs/text/hello.txt", "w")
 
 file.write("Hello Python!\n")
 file.write("I am learning programming\n")

@@ -3,7 +3,7 @@
 
 # from pathlib import Path
 
-# file_path = Path("notes.txt")
+# file_path = Path("outputs/text/notes.txt")
 
 # file_path.write_text("Hell Python", encoding="utf-8")
 
@@ -28,7 +28,7 @@ employees = [
 ]
 
 # Write employee data to a CSV file
-with open("employees.csv", "w", newline="", encoding="utf-8") as file:
+with open("outputs/csv/employees.csv", "w", newline="", encoding="utf-8") as file:
     writer = csv.DictWriter(
         file,
         fieldnames=["name", "role", "salary"]
@@ -38,7 +38,7 @@ with open("employees.csv", "w", newline="", encoding="utf-8") as file:
     writer.writerows(employees)
 
 # Read employee data from the CSV file
-with open("employees.csv", "r", newline="", encoding="utf-8") as file:
+with open("outputs/csv/employees.csv", "r", newline="", encoding="utf-8") as file:
     reader = csv.DictReader(file)
 
     for employee in reader:

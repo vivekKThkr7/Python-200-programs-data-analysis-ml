@@ -303,12 +303,12 @@ Instead of treating a path as jsut a string, oython gives us a path object.
 
 Example:
 
-from pathlib import path
+from pathlib import Path
 
-file_path = path("notes.txt)
+file_path = Path("outputs/text/notes.txt")
 
 here:
-file_path -> path object -> notes.txt
+file_path -> Path object -> outputs/text/notes.txt
 
 
 

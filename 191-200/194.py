@@ -11,12 +11,12 @@ data = {
 df = pd.DataFrame(data)
 
 # Save the data to a CSV file
-df.to_csv("sales.csv", index=False)
+df.to_csv("outputs/csv/sales.csv", index=False)
 
 print("Sales data saved.")
 
 # Read the data back from the CSV file
-sales = pd.read_csv("sales.csv")
+sales = pd.read_csv("outputs/csv/sales.csv")
 
 print("\nLoaded sales data:")
 print(sales)

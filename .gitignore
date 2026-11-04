@@ -22,7 +22,6 @@ ENV/
 htmlcov/
 
 # Generated capstone output
-wine_scatter.png
 
 # Operating system files
 .DS_Store

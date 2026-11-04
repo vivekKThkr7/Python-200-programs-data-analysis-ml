@@ -2,7 +2,7 @@
 
 import json
 
-with open ("expenses.json", "r") as file:
+with open ("outputs/json/expenses.json", "r") as file:
     expenses = json.load(file)
 
 for expense in expenses:

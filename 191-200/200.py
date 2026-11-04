@@ -85,10 +85,10 @@ plt.legend()
 plt.grid(True)
 plt.tight_layout()
 
-plt.savefig("wine_scatter.png", dpi=150, bbox_inches="tight")
+plt.savefig("outputs/charts/wine_scatter.png", dpi=150, bbox_inches="tight")
 plt.close()
 
-print("\nScatter plot saved to wine_scatter.png")
+print("\nScatter plot saved to outputs/charts/wine_scatter.png")
 
 
 # 7. Separate features and target labels, then split the data

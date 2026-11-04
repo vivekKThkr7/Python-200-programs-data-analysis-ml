@@ -22,13 +22,13 @@ try:
     posts = response.json()
 
     # Save the API data locally
-    with open("user1_posts.json", "w", encoding="utf-8") as file:
+    with open("outputs/json/user1_posts.json", "w", encoding="utf-8") as file:
         json.dump(posts, file, indent=4)
 
     print("API data saved successfully.")
 
     # Read the saved data
-    with open("user1_posts.json", "r", encoding="utf-8") as file:
+    with open("outputs/json/user1_posts.json", "r", encoding="utf-8") as file:
         saved_posts = json.load(file)
 
     print("Posts saved:", len(saved_posts))

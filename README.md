@@ -48,8 +48,8 @@ The final ten programs introduce common tools used in Python data analysis and i
 
 The final set contains a complete example and a related independent challenge:
 
-- **Main Program 200** (`191-200/200.py`) uses the **Iris dataset**. It creates a pandas DataFrame, inspects the data, checks for missing and duplicate rows, summarizes measurements by species, displays a scatter plot, trains a scaled Logistic Regression model, and evaluates predictions.
-- **Challenge 200** (`191-200/challenges/challenge200.py`) uses the **Wine dataset**. It follows a similar workflow and saves a scatter plot as `wine_scatter.png`.
+- **Main Program 200** (`191-200/200.py`) uses the **Wine dataset**. It creates a pandas DataFrame from the dataset's chemical measurements, inspects and summarizes the data, checks for missing and duplicate rows, compares selected measurements by wine class, creates a scatter plot, trains a scaled Logistic Regression model, and evaluates its predictions. The plot is saved to `outputs/charts/wine_scatter.png`.
+- **Challenge 200** (`191-200/challenges/challenge200.py`) also uses the **Wine dataset** and follows a similar analysis and machine-learning workflow. It saves its scatter plot to `outputs/charts/wine_scatter.png`, the same output location used by Main Program 200.
 
 The evaluation score produced by either script depends on its dataset and train/test split. These are educational examples for learning the workflow; they are not production-ready machine-learning systems or guarantees of performance on new data.
 
@@ -136,7 +136,7 @@ For a challenge, use the path to its file inside that set's challenge folder. Fo
 python "191-200/challenges/challenge191.py"
 ```
 
-**Important:** Run exercises from the repository root unless a program says otherwise. Some programs read or write files using relative paths, so running them from a different working directory may cause Python not to find the expected files. Some exercises also ask for keyboard input or create output files such as CSV files and chart images.
+**Important:** Run exercises from the repository root unless a program says otherwise. Some programs read or write files using relative paths, so running them from a different working directory may cause Python not to find the expected files. Some exercises also ask for keyboard input or create output files. Generated text, CSV, JSON, and chart files are organized under `outputs/text/`, `outputs/csv/`, `outputs/json/`, and `outputs/charts/`. The employee file used by Challenge 171 remains under `data/`.
 
 ## How I practised
 
