@@ -1,512 +1,426 @@
-<!-- # somthing -->
-<!-- Trying somthing new -->
+# Python 200 Programs — Course Notes
 
-<!-- Python is high-level programming language to build applications, automate tasks, analyze data, develop websites, and build AI/ML systems. -->
+These notes collect the main ideas from the later sections of the Python 200-program course. The repository contains 200 numbered programs and 200 matching challenges, progressing from Python fundamentals to data analysis and introductory machine learning.
 
-Programs 91 -100 : Functions -- Turing Code into Reusable Tools
+## Course roadmap
 
-** Functions let us write a piece of logic once and reuse it whenever we need it. 
+| Program range | Main topic |
+|---|---|
+| 1–20 | Python fundamentals |
+| 21–40 | Decision making |
+| 41–60 | Loops and algorithms |
+| 61–70 | Strings |
+| 71–90 | Lists and structured data |
+| 91–100 | Functions and reusable code |
+| 101–110 | Dictionaries |
+| 111–120 | Tuples, sets, and choosing data structures |
+| 121–130 | Exception handling |
+| 131–140 | Object-oriented programming (OOP) fundamentals |
+| 141–150 | Encapsulation, inheritance, and polymorphism |
+| 151–160 | Cleaner, more practical Python |
+| 161–170 | Building a small real-world project |
+| 171–180 | Reliable file paths and error handling |
+| 181–190 | APIs and HTTP requests |
+| 191–200 | NumPy, Pandas, visualization, and machine learning |
 
-Definition -> A function is a named block of code that performs a specific task.
+## Programs 91–100: Functions — turning code into reusable tools
 
+A **function** is a named block of code that performs a specific task. Functions let us write a piece of logic once and reuse it whenever we need it.
 
-100 / 200 -> 50 % Completed  💐  (Halfway Point)
+The main ideas in this section are defining a function, calling it, passing information through parameters, and returning a result.
 
-1 - 20 Fundamentsls
-21 - 40 Decision making
-41 - 60 Loops & Algorithms
-61 - 70 Strings
-71 - 90 Lists & Structured Data
-91 - 100 Functions
+## Programs 101–110: Dictionaries — storing data with meaning
 
+A **dictionary** stores data as key-value pairs. Each key identifies the value associated with it.
 
-Program 101 - 110 Dictionaries -- Storing Data with meaning
-
-marks = [75, 82, 85]  -> (List)
-
-
-<!-- DDictionary -->
+```python
 student = {
     "name": "Vivek",
     "age": 27,
-    "country": "Nepal"
+    "country": "Nepal",
 }
+```
 
-<!-- Important things to Notice -->
+Compare these three ways of storing information:
 
-1. variable
-
+```python
 age = 27
 
+ages = [20, 24, 38, 30]
 
-2. List
-
-age = [20, 24, 38, 30]
-
-
-3. Dictionary
-
-ages = {
+ages_by_person = {
     "Vivek": 27,
     "Ram": 25,
-    "Sita": 30
+    "Sita": 30,
 }
+```
 
+- A variable stores one value under one name.
+- A list stores an ordered collection of values.
+- A dictionary stores values under meaningful keys.
 
-<!-- Programms 111 - 120: Tuples, sets, & choosing the right Data Structure -->
+## Programs 111–120: Tuples, sets, and choosing the right data structure
 
-<!-- Tuple : is a collection of values that normally should not be changed -->
+Python provides several built-in collection types. Choose one based on how the data should behave.
 
-eg numbers = (10, 20, 30, 40, 50)
-looks similar to lsit but 
-numbers = [10, 20, 30, 40, 50]
+| Structure | Example | Changeable? | Duplicates? | Main idea |
+|---|---|---:|---:|---|
+| List | `[1, 2, 3]` | Yes | Yes | Ordered collection |
+| Tuple | `(1, 2, 3)` | No | Yes | Ordered, fixed collection |
+| Set | `{1, 2, 3}` | Yes | No | Unique values |
+| Dictionary | `{"a": 1}` | Yes | Keys are unique | Key-value mapping |
 
-<!-- list -> can be changed -->
-<!-- Tuple cannot be changed -->
+### Simple memory trick
 
+- **List** — many values that may change.
+- **Tuple** — values grouped together that should not change.
+- **Set** — unique values.
+- **Dictionary** — named values stored as key-value pairs.
 
+## Programs 121–130: Exception handling
 
+An **exception** is an event that interrupts the normal flow of a program while it is running. For example, converting non-numeric text to an integer raises a `ValueError`.
 
-<!-- List
-[10, 20, 20, 30]
-→ ordered collection
-→ duplicates allowed
-→ changeable
+```python
+try:
+    age = int(input("Enter your age: "))
+except ValueError:
+    print("Please enter a whole number.")
+```
 
-Tuple
-(10, 20, 20, 30)
-→ ordered collection
-→ duplicates allowed
-→ not changeable
+`try` contains code that may raise an exception. `except` handles a specified exception so the program can respond appropriately.
 
-Set
-{10, 20, 30}
-→ unique values
-→ duplicates removed -->
+Handle expected errors specifically. Avoid catching every possible exception unless there is a clear reason to do so.
 
+## Programs 131–140: Object-oriented programming — classes and objects
 
+**Object-oriented programming (OOP)** organizes a program around objects that combine data and behaviour.
 
-🧠 DATA STRUCTURE CHEAT SHEET
+Think about a bank account. Its data may include the account holder and balance. Its behaviour may include depositing money, withdrawing money, and checking the balance.
 
-This is one of the most important tables in your course.
+| Term | Simple meaning |
+|---|---|
+| Class | A blueprint used to create objects |
+| Object | An individual instance created from a class |
+| Attribute | Data belonging to an object |
+| Method | A function defined in a class |
+| `self` | The current object instance inside an instance method |
+| `__init__()` | The initializer called when an object is created |
+| Instance | Another word for an object created from a class |
 
-Structure	 Example   Changeable?	Duplicates?	   Main idea
-List	     [1,2,3]	✅	        ✅	        Ordered collection
-Tuple	     (1,2,3)	❌	        ✅	        Fixed collection
-Set	         {1,2,3}	✅	        ❌	        Unique values
-Dictionary	 {"a":1}	✅	      Keys unique	 Key → value
+### Four important OOP ideas
 
+1. **Class:** defines the structure and behaviour that objects can have.
+2. **Object:** an actual instance created from a class.
+3. **Inheritance:** a child class can reuse or extend behaviour from a parent class.
+4. **Polymorphism:** different object types can respond to the same method call in different ways.
 
-<!-- Simple memory trick
-LIST       → MANY VALUES
-TUPLE      → FIXED VALUES
-SET        → UNIQUE VALUES
-DICTIONARY → NAMED VALUES -->
+For example:
 
-
-
-
-
-
-
-
-
-
-<!-- 121 - 130 :  -->
-
-# What is an exception?
-
-# Exception : error that happens while the program is running.
-
-age = int(input("Enter your age: "))
-
-# any value except integer return an error 
-
-# eg: if someone type abcd it gives ValueError
-
-
-
-Program 131 - 140 : OOP - Class & Objects
-130/200 -> 65%
-
-<!-- What is OOP? -->
-
-Its a way of organizing a program around objects data and behavior.
-
-For example, think about a bank account.
-
-It has data:
-
-account holder
-balance
-account number
-
-And it has behavior:
-
-deposit
-withdraw
-check balance
-
-Instead of keeping everything scattered around, OOP lets us package related things together.
-
-Think:
-
-BANK ACCOUNT OBJECT
-────────────────────
-Data:
-  owner
-  balance
-
-Actions:
-  deposit()
-  withdraw()
-  check_balance()
-
-That's the core idea.
-
-
-
-Term   -----> Simple Meaning
-Class          Blueprint
-Object        Actual thing created from class
-Attribute     Data belonging to the onjebt
-Method        Function benlonging to object.
-self          current object
-_init_( )     Setup when object is created
-instance      Another word for an object
-
-
-
-
-
-
-
-
-
-
-🧠 OOP FUNDAMENTAL CHECKPOINT
-
-I especially want you to understand these four levels.
-
-Level 1 — Class
-class Student:
-
-Blueprint.
-
-Level 2 — Object
-student = Student(...)
-
-Actual thing.
-
-Level 3 — Inheritance
-class Student(Person):
-
-Student gets reusable behavior from Person.
-
-Level 4 — Polymorphism
-for employee in employees:
-    employee.work()
-
-Different objects can perform the same method differently.
-
-🔥 Your biggest fundamental concept — one more time
-
-Look at:
-
+```python
 employees = [
     Developer("Ram"),
-    Designer("Sita")
+    Designer("Sita"),
 ]
 
-Here:
-
-employees
-   ↓
-WHOLE LIST
-
-Inside:
-
 for employee in employees:
-employees → whole collection
-employee  → one object
+    employee.work()
+```
 
-Then:
+`employees` refers to the whole list. `employee` refers to one object at a time. Each object's `work()` method can behave differently.
 
-employee.work()
+### Four related terms
 
-means:
+| Concept | Simple meaning |
+|---|---|
+| Encapsulation | Keeping related data and behaviour together and controlling access to data |
+| Inheritance | A child class reuses or extends a parent class |
+| Method overriding | A child class provides its own version of an inherited method |
+| Polymorphism | The same method call can produce different behaviour for different object types |
 
-Call work() on this particular object.
+## Programs 141–150: OOP in practice
 
-This is the same fundamental pattern you've been learning since lists:
+This section develops the OOP ideas through a small sequence of examples:
 
-marks → whole list
-mark  → one item
+| Program | Topic |
+|---:|---|
+| 141 | Encapsulation |
+| 142 | Getter methods |
+| 143 | Setter methods |
+| 144 | Inheritance |
+| 145 | Adding child-class attributes |
+| 146 | Reusing parent methods and adding child methods |
+| 147 | Method overriding |
+| 148 | Using `super()` with method overriding |
+| 149 | Polymorphism |
+| 150 | Mini OOP system |
 
-and now:
+Encapsulation groups an object's data with the methods that control it. Getter methods read a value; setter methods update a value in a controlled way. Inheritance lets a child class reuse a parent class's attributes and methods. A child class can add its own attributes, add methods, or override inherited methods. `super()` lets a child class call behaviour from its parent class.
 
-employees → whole list
-employee  → one object
+## Programs 151–160: Writing cleaner, more practical Python
 
-🔥 Same thinking. Different data.
+| Program | Topic |
+|---:|---|
+| 151 | `import` |
+| 152 | Useful built-in modules |
+| 153 | Creating your own module |
+| 154 | Variable scope |
+| 155 | Global and local variables |
+| 156 | List comprehensions |
+| 157 | Comprehensions with conditions |
+| 158 | Dictionary comprehensions |
+| 159 | Lambda functions |
+| 160 | Combining these ideas |
 
-🧠 Four OOP Terms — Simple Definitions
-Concept	Simple meaning
-Encapsulation	Control access to object data
-Inheritance	Child reuses parent
-Overriding	Child changes inherited behavior
-Polymorphism	Same method call, different behavior
+## Programs 161–170: From Python exercises to a real project
 
+A practical program connects several pieces into a workflow:
 
-
-<!-- Program 151 to 160 : Writing Cleaner, more Practical Python -->
-151 → import
-152 → useful built-in modules
-153 → create your own module
-154 → variable scope
-155 → global vs local
-156 → list comprehension
-157 → comprehension with condition
-158 → dictionary comprehension
-159 → lambda
-160 → combining these ideas
-
-
-
-
-
-<!-- Programs 161–170: From Python Exercises to a Real Project -->
-<!-- 
-    User
- ↓
+```text
+User
+  ↓
 Input
- ↓
+  ↓
 Validation
- ↓
+  ↓
 Data structure
- ↓
+  ↓
 Functions
- ↓
+  ↓
 File storage
- ↓
+  ↓
 Reports
- -->
+```
 
+The important lesson is that a real program is more than a single calculation. It accepts input, checks it, organizes information, performs operations, stores data when needed, and presents useful results.
 
- <!-- Programs 171–180: Making a Real Project Reliable -->
-<!-- IN this level we are going to learn how real Python programs are organized and used in practical work. -->
+## Programs 171–180: Making a real project reliable
 
-<!-- Q. What is pathlib? -->
+### What is `pathlib`?
 
-Pathlib is a built-in python module used to work with; Files, Folders, File paths.
-Instead of treating a path as jsut a string, oython gives us a path object.
+`pathlib` is a Python standard-library module for working with file-system paths. Instead of treating a path only as a string, it provides a `Path` object with useful methods for working with files and folders.
 
-Example:
-
+```python
 from pathlib import Path
 
 file_path = Path("outputs/text/notes.txt")
+```
 
-here:
-file_path -> Path object -> outputs/text/notes.txt
+Here, `file_path` is a `Path` object representing `outputs/text/notes.txt`.
 
+### Why raise an exception instead of printing an error inside a function?
 
+Raising an exception allows the code that called the function to decide how to handle the problem. This separates the function's core work from the application's response to an error.
 
+## Programs 181–190: Working with APIs and HTTP requests
 
-from Program 176.py
-Q. Why not simply print an error inside the function?
-A. Because raising an exception allows the calling code to decide how to handle the problem. This helps separate the business logic from the application's response to errors.
+| Program | Topic |
+|---:|---|
+| 181 | What an API is and how to make a GET request |
+| 182 | HTTP status codes and successful responses |
+| 183 | Query parameters |
+| 184 | Reading and processing API data |
+| 185 | Handling API errors and timeouts |
+| 186 | Sending data using POST |
+| 187 | Working with nested JSON |
+| 188 | Building reusable API functions |
+| 189 | Saving API data into a JSON file |
+| 190 | Mini project: User Directory API |
 
+### What is `requests`?
 
+`requests` is a third-party Python library that makes it easier to send HTTP requests to web servers. Unlike `pathlib`, `json`, and `datetime`, it is not part of Python's standard library and must be installed.
 
+```bash
+python -m pip install requests
+```
 
+### What is an API?
 
-<!-- Python Set 19  -->
-<!-- Our learning plan -->
-<!-- 
+**API** means **Application Programming Interface**. An API provides a defined way for one application to request information or services from another application.
 
-Program	     Topic
-181	        What an API is and how to make a GET request
-182	        HTTP status codes and successful responses
-183	        Query parameters
-184	        Reading and processing API data
-185	        Handling API errors and timeouts
-186	        Sending data using POST
-187	        Working with nested JSON
-188	        Building reusable API functions
-189	        Saving API data into a JSON file
-190	        Mini project: User Directory API
+A typical request-and-response flow looks like this:
 
- -->
+```text
+Python program → API / web server → response → Python program
+```
 
+An API request commonly uses a URL called an **endpoint**. For example, the course exercises use the JSONPlaceholder endpoint:
 
-# what is requests?
-#  It is Python library that makes it easier to communicate with web serrvers. unlike Pathlib, JSON and datatime,  it is not part of Python's standard library, so need to be installed form the terminal. 
+`https://jsonplaceholder.typicode.com/posts/1`
 
-# python -m pip install requests
+### What is HTTP?
 
-# What is API?
+**HTTP** (Hypertext Transfer Protocol) is the protocol used for communication between HTTP clients and servers.
 
-# API -> APPLICATION PROGRAMMING INTERFACE.
-# API as a way for one application to request information or services from another application.
+- `GET` requests retrieve information.
+- `POST` requests send data to a server, commonly to create a resource.
 
-python program (request a post) <==> API/Web server(Receives the request and returns data) <==> Python Program (Read thye response and uses the data)
+### What is an HTTP status code?
 
+An HTTP status code is a number returned with an HTTP response that describes the result of the request.
 
-API request often involves aa URL called an endpoint. 
-<!--  https://jsonplaceholder.typicode.com/posts/1 -->
+| Status code | Meaning |
+|---:|---|
+| 200 | Request succeeded |
+| 201 | Resource created |
+| 400 | Bad request |
+| 401 | Authentication required or failed |
+| 403 | Access forbidden |
+| 404 | Resource not found |
+| 500 | Internal server error |
 
+### Handling request errors and timeouts
 
-<!-- What is HTTP -->
-<!-- HTTP is a protocal that allows clients and servers to communicate over a network. -->
+Networks can fail, URLs can be incorrect, records can be missing, and a server can become temporarily unavailable.
 
-<!--   GET   ==> Retrieve Information  -->
-<!--   POST ==>  Send data to a server -->
+| Exception | Typical meaning |
+|---|---|
+| `HTTPError` | An unsuccessful HTTP status was raised after checking the response |
+| `Timeout` | The request took too long |
+| `ConnectionError` | A network connection problem occurred |
+| `RequestException` | The base exception class for request-related errors in `requests` |
 
-<!-- What is Status code? -->
-<!-- An HTTP status code is a number that describes the result of a request. -->
+Use exception handling to make API programs respond clearly to expected failures. A timeout should be set when a request must not wait indefinitely.
 
-<!-- 
-Status   code	Meaning
-200	    Request succeeded
-201	    Resource created
-400	    Bad request
-401	    Authentication required or failed
-403	    Access forbidden
-404	    Resource not found
-500	    Internal server error
- -->
+## Programs 191–200: NumPy, Pandas, visualization, and machine learning
 
+This section connects numerical computing, data analysis, visualization, and introductory machine learning.
 
-<!-- Handling API Error and Timeout -->
-<!-- networks can fail, URLs can be incorrect. records can be missing, Server can become temporarily unavailable. -->
-<!-- What are the common request error? -->
-ERROR TYPE         Type Cause
-HTTPError           Unsuccessful HTTP atatus after checking the response
-Timeout             The request took too long without a timely response
-ConnectionError     A network connection problem
-QequestException    A border request-related exception
+| Program | Topic |
+|---:|---|
+| 191 | NumPy arrays |
+| 192 | NumPy calculations and statistics |
+| 193 | Pandas DataFrames |
+| 194 | Reading and writing CSV data |
+| 195 | Handling missing values and duplicate records |
+| 196 | Grouping and analysing data |
+| 197 | Visualizing data with Matplotlib |
+| 198 | Understanding machine learning and splitting data |
+| 199 | Training and evaluating a machine-learning model |
+| 200 | Final capstone: data analysis and machine-learning pipeline |
 
+### Program 196: Grouping and analysing data
 
+Suppose a company wants to know how much revenue each product category generated. We could loop through every record and calculate the totals manually, but Pandas provides the convenient `groupby()` operation.
 
+`groupby()` divides records into groups based on one or more columns so that a calculation can be performed for each group. This is often described as **split–apply–combine**:
 
+1. Split the data into groups.
+2. Apply a calculation to each group.
+3. Combine the results.
 
-<!-- 191 - 200 -->
+### Program 197: Visualizing data with Matplotlib
 
-<!-- This is the foundation for progressing toward AI and data-driven applications. -->
+Numbers and tables are useful, but a chart can make a pattern easier to recognize. **Matplotlib** is a Python visualization library used to create line charts, bar charts, scatter plots, and other graphics.
 
-191  ->> NumPy - numberical arrays
-192  ->> NumPy - Calculation and statics
-193  ->> Pandas - DataFrames
-194  ->> Reading and writing CSV data
-195  ->> Cleaning Missing and duplicate data
-196  ->> Grouping and analysing data
-197  ->> Visualizing data analysing data 
-198  ->> Understanding machine-learning model
-199  ->> Training and evaluting a maching-learning model
-200  ->> Final capstone - Data Analysins and AI Pipeline
+A typical chart workflow is to create a figure and axes, draw the data, add labels, and then display or save the chart.
 
+### Program 198: Understanding machine learning and splitting data
 
+**Machine learning** is a field of artificial intelligence in which a model learns patterns from data and uses those patterns to make predictions.
 
-Program 196 ; Grouping and Analysing Data 
+Consider a program that identifies a flower type from its measurements:
 
-Suppose your company to knoww how much revenue each product category generated. 
+```text
+Flower measurements
+        ↓
+     Features
+        ↓
+Machine-learning model
+        ↓
+ Predicted flower type
+```
 
-You could loop through every record and calculate totals manually, but Pandas has a convenient operation called groupy()
+- **Features (`X`)** are the input measurements used by the model.
+- **Target (`y`)** is the answer or label the model is trained to predict.
 
-groupby()  ->> group redcords according to a particular column and then lets you calculate a stastic for each group.
+The exercise uses the Iris dataset provided by scikit-learn. It contains 150 flower samples, four numerical measurements per sample, and three flower classes.
 
-pandas describes this as a split-apply-combinr operation: split the data into groups, calculate something for each group, and combine the results.
+### Why split the data?
 
+A dataset is commonly divided into two parts:
 
+- **Training data** is used to fit the model and learn patterns.
+- **Testing data** is held back to evaluate predictions on examples the model did not use during training.
 
+### Program 199: Training and evaluating a machine-learning model
 
-Program 197 ; Visualizing Data with Matplotlib
+Training means giving an algorithm examples so it can learn patterns from the data.
 
-Numbers and table are useful, but a chart can make a pattern easier to recognize.
+For the Iris exercise:
 
-Matplotlib is a Python visualization library used to create line charts, bar charts, scatter plots, and other graphics. The usual structure is to create a figure and axes, draw the data, label the chart, and display or save it.
+- Features (`X`) contain flower measurements.
+- Labels (`y`) identify the flower species.
+- The training subset is used to fit the model.
+- The test subset is used to evaluate predictions against the correct labels.
 
+The overall process is:
 
-Program 198 Understanding machine Learning and Spitting Data
+```text
+Dataset
+   ↓
+Train/test split
+   ↓
+Train the model on the training data
+   ↓
+Predict labels for the test data
+   ↓
+Compare predictions with the correct labels
+```
 
-Machine learing is a field of AI where models learn patterns from data and using those patterns from data and use those patterns to make predictions. 
+Programs 198 and 199 use the Iris dataset. Program 199 evaluates a Logistic Regression classifier; Challenge 199 compares Logistic Regression with K-Nearest Neighbors (KNN) using the same train/test split.
 
-What are features and targets?
-Imagine you want a program to identify a ype of flower based on its measurements. The input measurements are called features. 
+### Program 200: Final capstone — data analysis and machine-learning pipeline
 
-The answer the model should predict is called the target or label.
+A **data-analysis and machine-learning pipeline** is a sequence of connected steps that turns raw data into useful information and model predictions.
 
-    Flower measurements
-            ↓
-        Features
-            ↓
-    Machine-learning model
-            ↓
-    Predicted flower type
+The final capstone uses the Wine dataset provided by scikit-learn and brings together Pandas, visualization, and machine learning.
 
+The workflow is:
 
-For our example, we'll use the Iris dataset available through scikit-learn. It has 150 flower samples, four numerical measurements per sample, and three flower classes. Scikit-learn provides helper tools for splitting data into training and testing subsets.
-
-Q. Why split Data?
-
-We normally seperate a dataset into: 
-Training data: used to teach the model patterns.
-Testing data: used to evaluate how the trained model perfroms on data it did not train on. 
-
-
-program 199 ; Training and Evaluation a Machine-learning Model
-
-What does training a model means?
-->> In machine learning, we give an algorithm examples so it can learn pattern from data.
-For the Iris dataset.
-Features (X) are measurements of flowers.
-Labels (y) identify the flower species.
-Training data is used to fit the model. 
-Test data is reserved to evaluate how well the model predicts examples it hasn't trained on. 
-
-
-The process is :
-        Dataset
-    Flower measurement and species lables
-            |
-        Train/Test split
-    Seperate training examples from test examples
-            |
-        Train the model
-    Learn patterns from training data.
-            |
-        Evaluate the model
-    Compare predections with the correct test labels.
-
-        
-
-
-Program 200 ; Final Capstone: Data Analysis and AI Pipeline
-
-Here we are going to bring NumPy, Pandas, visualization and machine learning. 
-
-definition ->> A data-analysis and AI Pipeline is a series of connected setps that turns raw into useful information and model predection. 
-
-In ths capstone Porgram:
-1. Load a dataset
-2. Explore it with pandas
-3. Inspect missing and duplicate records.
+1. Load the dataset.
+2. Explore it with Pandas.
+3. Inspect missing values and duplicate records.
 4. Summarize and visualize the data.
-5. Split the features and labels
-6. Train a machine-learning model.
-7. Evaluate its predections.
-8. Try a predection on a test example
+5. Separate features from the target labels.
+6. Split the data into training and testing subsets.
+7. Train a machine-learning model.
+8. Evaluate its predictions and try a prediction on a test example.
 
+The Wine dataset used by the capstone contains 178 samples, 13 numerical features, and three target classes. The model workflow uses a scikit-learn `Pipeline` to keep `StandardScaler` preprocessing together with `LogisticRegression` training. The program saves its scatter plot to `outputs/charts/wine_scatter.png`.
 
+This capstone is more than one Python exercise because it connects several tools in one workflow:
 
-<!-- What makes this capstone? -->
+- **Pandas:** inspect and summarize the dataset.
+- **Matplotlib:** visualize relationships in the data.
+- **scikit-learn:** prepare data, train a model, and make predictions.
+- **Evaluation metrics:** assess model performance.
 
-This is no longer just a python exercie. We're connecting different tools to complete a whole workflow. 
-1. Pandas: Inspect and summarize the dataset.
-2. matplotlib: Visualize
-3. scikit_learn : Train a model and make predection. 
-4. Evaluation metrics : assess model performance.
+An important real-world lesson: missing values and duplicate records should be handled according to the meaning of the dataset. Do not remove them automatically just because they exist.
 
-One important real-world lession: missing values and duplicates should be handled according to the meaning of the dataset, not automatically remoived just because they exist.
+## Code quality checklist
 
+Use this checklist when writing or reviewing programs in the repository:
+
+1. **Readable names:** choose variable, function, and class names that explain their purpose. Use `snake_case` for variables and functions and `PascalCase` for classes.
+2. **Consistent formatting:** use four spaces for indentation, keep related code together, and include a final newline in each source file.
+3. **Focused functions:** keep each function responsible for one clear task. Avoid unnecessary repeated code.
+4. **Useful comments:** explain intent or a non-obvious decision rather than translating every line into English.
+5. **Safe input and errors:** validate user input and catch specific expected exceptions.
+6. **Reliable paths:** use `pathlib.Path` for file and folder paths rather than relying on the current working directory.
+7. **Data care:** inspect missing values and duplicates before deciding how to handle them.
+8. **Reproducible model evaluation:** keep training and testing data separate. Fit preprocessing steps on training data only; using a scikit-learn `Pipeline` helps keep preprocessing and model training together.
+9. **Project organization:** keep source code, input data, and generated outputs in their appropriate folders. Do not commit virtual environments, caches, or secrets.
+10. **Verification:** compile Python files and run appropriate exercises or tests before committing changes. Do not run every script blindly when it expects interactive input, makes network requests, or changes files.
+
+### Repository verification
+
+From the repository root, run:
+
+```bash
+python scripts/check_course_quality.py
+git diff --check
+```
+
+The checker verifies the numbered program/challenge structure and Python syntax. It does not execute every exercise, because some exercises require input, network access, or create files.
